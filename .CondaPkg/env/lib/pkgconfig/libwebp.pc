@@ -1,0 +1,12 @@
+prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libwebp
+Description: Library for the WebP graphics format
+Version: 1.4.0
+Requires.private: libsharpyuv
+Cflags: -I${includedir}
+Libs: -L${libdir} -lwebp
+Libs.private:   
