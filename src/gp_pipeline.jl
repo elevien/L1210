@@ -112,16 +112,17 @@ for lin in lineages
     df[:,:gen_time]= vcat([ones(length(df[df.position .==p,:].time))*(df[df.position .==p,:].time[end]-df[df.position .==p,:].time[1])
         for p in unique(df.position)]...);
 
-    # pred_df = df[1:6:length(df.time),[:time,:age,:M,:lineage,:position,:gen_time,:label,:cell]]
-    pred_df = uniform_prediction_array(df,0.3)
+    pred_df = uniform_prediction_array(df,0.1)
 
     opt_inds = 1:6:min(3000,length(df.time))
     obs_inds = 1:1:length(df.time)
 
     cd(dirname(@__FILE__))
-    folder = "./output/output_7-23-24/lineage_$lin"
+    folder = "./output/output_7-24-24/lineage_$lin"
     mkpath(folder)
     @time output = gp_predict(df,model,opt_inds,obs_inds,pred_df)
+    output[1][:,:age] = pred_df[:,:age]
+    output[1][:,:age_normed] = pred_df[:,:age_normed]
     CSV.write(folder*"/preds.csv",output[1])
-    CSV.write(folder*"/opt_params.csv",output[1])
+    CSV.write(folder*"/opt_params.csv",output[2])
 end

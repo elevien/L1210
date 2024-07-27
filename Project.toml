@@ -6,6 +6,7 @@ version = "0.1.0"
 [deps]
 AbstractGPs = "99985d1d-32ba-4be9-9821-2ec096f28918"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+CausalityTools = "5520caf5-2dd7-5c5d-bfcb-a00e56ac49f7"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 GaussianProcesses = "891a1506-143c-57d2-908e-e1f8e92e6de9"
