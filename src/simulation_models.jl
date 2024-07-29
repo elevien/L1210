@@ -1,7 +1,9 @@
 function build_model(θ,init,t_range)
     c_crit = θ[1]
     σM = θ[end]
-    p = θ[2:end]
+    σCS = θ[2]
+    p = θ[3:end]
+
     function F(du, u, p, t)
         # Model parameters.
         τ,λ0,D,σM = p
@@ -28,7 +30,7 @@ function build_model(θ,init,t_range)
     function affect!(integrator)
         u = integrator.u
         u[1] = u[1]/2
-        u[2] = u[2]
+        u[2] = u[2] + rand(Normal(0,σCS))
         u[3] = u[1] + rand(Normal(c_crit,σM))
         u[4] = u[4] + 1
         nothing

@@ -3,14 +3,14 @@
 
 ## Organization of this repository
 
-The ``src`` folder contains all the code. I've seperated code for processing/simulation and analysis. All the analysis code, which produces the paper figures is in the ``notebooks`` folder. 
+The ``src`` folder contains all the code. I've seperated code for processing/simulation and analysis. All the analysis code, which produces the paper figures is in the ``notebooks`` folder. Only files with names of the form ``PAPER_*`` are directly run to generate data and figures for the paper. 
 
 
 This is where all the project specific code is contained. Within this folder you will find the following:
   
 The core functionality is in the following files:
-* ``gp_pipeline.jl``  Gaussian process pipeline on the experimental data
-* ``generate_sums.jl`` Generates the simulated data used for our analysis
+* ``PAPER_gp_pipeline.jl``  Gaussian process pipeline on the experimental data
+* ``PAPER_generate_sums.jl`` Generates the simulated data used for our analysis
 
 
 Additional code and output is in the folder:
