@@ -6,7 +6,7 @@ include("./GP.jl")
 include("./LineageAnalysisTools.jl")
 using .L1210
 println(Pkg.status())
-using DataFrames,CSV,LinearAlgebra,Optim,StatsBase,PythonPlot
+using DataFrames,CSV,LinearAlgebra,Optim,StatsBase,PythonPlot,Tables
 
 
 smooth=false
@@ -118,11 +118,14 @@ for lin in lineages
     obs_inds = 1:1:length(df.time)
 
     cd(dirname(@__FILE__))
-    folder = "./output/output_7-24-24/lineage_$lin"
+    folder = "./output/output_7-29-24/lineage_$lin"
     mkpath(folder)
     @time output = gp_predict(df,model,opt_inds,obs_inds,pred_df)
-    output[1][:,:age] = pred_df[:,:age]
-    output[1][:,:age_normed] = pred_df[:,:age_normed]
+    # for j in 1:length(output)
+    #     output[j][:,:age] = pred_df[:,:age]
+    #     output[j][:,:age_normed] = pred_df[:,:age_normed]
+    # end
+    print(output[2])
     CSV.write(folder*"/preds.csv",output[1])
-    CSV.write(folder*"/opt_params.csv",output[2])
+    CSV.write(folder*"/opt_params.csv", output[2], writeheader=false)
 end
