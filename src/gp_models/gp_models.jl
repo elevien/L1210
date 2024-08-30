@@ -3,11 +3,11 @@
 # Model types
 ########################################################################################
 
-struct Matern32Model <: LineageAnalysisTools.GpDecomp end
-struct TestModel <: LineageAnalysisTools.GpDecomp end
-struct OUModel <: LineageAnalysisTools.GpDecomp end 
-struct Matern32NoTrendModel <: LineageAnalysisTools.GpDecomp end
-struct CellSpecificMatern32Model <: LineageAnalysisTools.GpDecomp end
+struct Matern32Model <: GrowthTraceTools.GpDecomp end
+struct TestModel <: GrowthTraceTools.GpDecomp end
+struct OUModel <: GrowthTraceTools.GpDecomp end 
+struct Matern32NoTrendModel <: GrowthTraceTools.GpDecomp end
+struct CellSpecificMatern32Model <: GrowthTraceTools.GpDecomp end
 
 
 ########################################################################################
