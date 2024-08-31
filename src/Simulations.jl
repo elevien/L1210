@@ -6,5 +6,6 @@ function solver_output_to_dataframe(sol,names)
     df[:,:age] = vcat([df[df.position .==p,:time] .- df[df.position .==p,:time][1] for p in positions]...)
     df[:,:age_normed] = vcat([df[df.position .==p,:age]./df[df.position .==p,:age][end] for p in positions]...);
     df[:,:age_rounded] = round.(df[:,:age_normed],digits=1);
+    # need to add: length, lnM_sum, position
     return df
 end   

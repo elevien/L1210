@@ -1,19 +1,6 @@
-import Pkg;
-println(Pkg.status())
-using CSV
-using StatsBase
-using DataFrames
-using PythonPlot
-using DifferentialEquations
-using LinearAlgebra
-using Distributions
-using Setfield
-using Tables
-using Optim
-include("./GrowthTraceTools.jl")
-using .GrowthTraceTools
+# runs the GP pipeline on input data (simulated or real)
 cd(dirname(@__FILE__))
-
+include("./imports.jl")
 
 
  # 1: LOAD PROCESSED DATA -----------------------------------------------------------------------------------------------

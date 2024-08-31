@@ -16,9 +16,16 @@ cd(dirname(@__FILE__))
 
 
 # ----------------------------------------------------------------------------------------------------------------
-data = CSV.read("./output/data_processed.csv",DataFrames.DataFrame);
+data = CSV.read("./../output/data_processed.csv",DataFrames.DataFrame);
+data = data[data.length .> 9,:]
 lineages = unique(data.lineage);
 
+
+
+
+
+# ----------------------------------------------------------------------------------------------------------------
+# Now we sweep through parameter space and generate a set of lineages with different values of τ and ϕ
 # based our simulated data of one lineage
 data_df = data[data.lineage .== lineages[5],:]
 data_df.time = data_df.time .- data_df.time[1];
