@@ -1,8 +1,5 @@
 # add the columns needed for the Gaussian Process pipeline (PAPER_run_gp.jl)
 
-cd(dirname(@__FILE__))
-include("./imports.jl")
-
 data = CSV.read("./../smr_data/traceupdated.csv",DataFrame)
 lineages = unique(data.lineage)
 lengths = vcat([

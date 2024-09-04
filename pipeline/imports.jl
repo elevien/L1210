@@ -12,6 +12,8 @@ using Distributions
 using Setfield
 using Tables
 using Optim
+using ProgressBars
+using Alert
 include("./../src/GrowthTraceTools.jl")
 using .GrowthTraceTools
 

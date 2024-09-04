@@ -1,6 +1,4 @@
-# generate simulations of each lineage from OU model (no division noise) based on fits to simulated lineages
-cd(dirname(@__FILE__))
-include("./imports.jl")
+
 
 # ----------------------------------------------------------------------------------------------------------------
 # get raw data as template 
@@ -17,7 +15,7 @@ lineages
 # code used for fitting
 function fit_ar(df)
     t = df[:,:time]
-    dt = mean(diff(t))
+    dt = mean(diff(t))*1
     x = df[1:1:end,:matern32_flucs_x]
     X = hcat(ones(length(x)-1),x[1:end-1])
     y = x[2:end]
@@ -46,8 +44,7 @@ for lin in lineages
     println("    θ = ",θ)
     init = [θ.Δ,θ.λ0,2*θ.Δ]
 
-    for i in 1:nreps
-        println("       * rep"*string(i))
+    for i in ProgressBar(1:nreps)
         # build model and run 
         prob,callback,names = GrowthTraceTools.build_model_OU(θ,init,df.time)
         sol = solve(prob,EM(),callback = callback);
