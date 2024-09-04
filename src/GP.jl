@@ -193,7 +193,7 @@ function uniform_prediction_array(data,dt)
     age = vcat([LinRange(0,gen_times[positions .== j][1],length(positions[positions .== j])) for j in unique(positions)]...);
     age_normed = age ./ gen_times
     lineages = ones(length(times))*data[1,:lineage]
-    labels = fill(data[1,:label],length(times))
+   #labels = fill(data[1,:label],length(times))
     return DataFrame(hcat(times,age,age_normed,positions,lineages,cells,gen_times)
     ,[:time,:age,:age_normed,:position,:lineage,:cell,:gen_time]);
 end

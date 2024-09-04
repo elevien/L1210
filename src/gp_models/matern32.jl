@@ -62,7 +62,7 @@ end
 
 #---------------------------------------------------------------------------------------
 
-name(m::Matern32NoTrendModel) = "matern32-notrend"
+name(m::Matern32NoTrendModel) = "matern32notrend"
 param_names(m::Matern32NoTrendModel) = [:A_flucs,:tau_flucs,:A_err]
 lntheta0(m::Matern32NoTrendModel) = log.([0.01,2.,0.0001])
 terms(m::Matern32NoTrendModel) = ["flucs","noise"]
