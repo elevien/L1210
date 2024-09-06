@@ -11,11 +11,11 @@ lineages = unique(data.lineage);
 
 # ----------------------------------------------------------------------------------------------------------------
 # setup 
-τ_range = collect(2:0.1:15)
+τ_range = [2.0,10.0]
 
 # ----------------------------------------------------------------------------------------------------------------
 # 
-nreps = 10
+nreps = 5
 sims = []
 global k = 1
 for τ in τ_range
@@ -52,6 +52,7 @@ for τ in τ_range
             sim[:,:replicate] = ones(length(sim.time)) .* i
             sim[:,:lineage] = ones(length(sim.time)) .* k
             sim[:,:model] = zeros(length(sim.time))
+            sim[:,:τ] = ones(length(sim.time)) .* τ
             push!(sims,sim)
 
             global k = k+1
@@ -76,8 +77,9 @@ for τ in τ_range
             sim[:,:replicate] = ones(length(sim.time)) .* i
             sim[:,:lineage] = ones(length(sim.time)) .* k
             sim[:,:model] = ones(length(sim.time))
+            sim[:,:τ] = ones(length(sim.time)) .* τ
             push!(sims,sim)
-            
+
             global k = k+1
 
         end

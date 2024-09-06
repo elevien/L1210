@@ -1,12 +1,12 @@
-# runs the GP pipeline on input data (simulated or real)
+# ########################################################################################
+# SETUP
+# ########################################################################################
+# run with julia --project=. ./pipeline/run.jl
+
 cd(dirname(@__FILE__))
 include("./imports.jl")
 include("./gp_pipeline.jl")
 
-
-# ########################################################################################
-# SETUP
-# ########################################################################################
 
 # preprocess exerimental data
 # include("./preprocess.jl")
@@ -49,5 +49,16 @@ include("./gp_pipeline.jl")
 # ----------------------------------------------------------------------------------------
 # generate simulations
 include("./fig5_sims.jl")
-# alert("Finished fig5 simulations")
+alert("**** Finished fig5 simulations ****")
+
+# ----------------------------------------------------------------------------------------
+# run GP on one replicate of sims
+sim_source = "./../output/sims_models.csv"
+sim_data = CSV.read(sim_source,DataFrames.DataFrame);
+sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
+sim_data = sim_data[sim_data.replicate .==1,:] # only run 1 replicate through the GP
+model = GrowthTraceTools.Matern32NoTrendModel()
+gp_pipeline(sim_data,"./../output/gp/sims_fig5",model)
+alert("**** Finished running GP on fig 5 sims ****")
+
 

@@ -10,33 +10,45 @@
 """  
 produces the covariance matrix of the total process (summed over kernels)
 """
-function K_sum(m::GpDecomp,X::Array{Float64,2},lntheta)
+function K_sum(m::GpDecomp, X::Array{Float64, 2}, lntheta)
     T = terms(m)
-    n = length(X[:,1])
-    #Ks = zeros(n,n)
-    Ks = hcat([[sum([K(m,t,X[i,:],X[j,:],lntheta) for t in terms(m)]) for i in 1:n] for j in 1:n]...)
-    # for t in T
-    #     for i in 1:n
-    #         for j in i:n
-    #             Ks[i,j] = Ks[i,j] + K(m,t,X[i,:],X[j,:],lntheta)
-    #             Ks[j,i] = Ks[i,j]
-    #         end
-    #     end
-    # end
+    n = length(X[:, 1])
+    Ks = Matrix{Float64}(undef, n, n)  # Preallocate memory for the matrix
+
+    for i in 1:n
+        for j in 1:n
+            Ks[i, j] = sum(K(m, t, X[i, :], X[j, :], lntheta) for t in T)
+        end
+    end
+
     return Ks
 end
 
-function K_mat(m::GpDecomp,term::String,X::Array{Float64,2},lntheta)
-    n = length(X[:,1])
-    Ks = zeros(n,n)
-    for i in 1:n
+
+function K_mat(m::GpDecomp, term::String, X::Array{Float64, 2}, lntheta)
+    n = length(X[:, 1])
+    Ks = Matrix{Float64}(undef, n, n)  # Preallocate the matrix
+
+    @inbounds for i in 1:n
         for j in i:n
-            Ks[i,j] = Ks[i,j] + K(m,term,X[i,:],X[j,:],lntheta)
-            Ks[j,i] = Ks[i,j]
+            Ks[i, j] = Ks[i, j] + K(m, term, X[i, :], X[j, :], lntheta)
+            Ks[j, i] = Ks[i, j]
         end
     end
+
     return Ks
 end
+# function K_mat(m::GpDecomp,term::String,X::Array{Float64,2},lntheta)
+#     n = length(X[:,1])
+#     Ks = zeros(n,n)
+#     for i in 1:n
+#         for j in i:n
+#             Ks[i,j] = Ks[i,j] + K(m,term,X[i,:],X[j,:],lntheta)
+#             Ks[j,i] = Ks[i,j]
+#         end
+#     end
+#     return Ks
+# end
 
 function K_mat(m::GpDecomp,term::String,X1::Array{Float64,2},X2::Array{Float64,2},lntheta)
 
@@ -79,7 +91,7 @@ end
 # posterior inference
 function target(m::GpDecomp,Xo::Array{Float64,2},y::Array{Float64,1},lntheta)
     K = K_sum(m,Xo,lntheta)
-    C = cholesky(K)
+    C = cholesky(Symmetric(K))
     alpha = C.U \(C.U' \ y)
     return 0.5*sum(log.(diag(C.U))) + 0.5*y'*alpha
 end

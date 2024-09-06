@@ -32,7 +32,7 @@ function build_model_OU(θOU,init,times)
     end
 
     callback = ContinuousCallback(condition, affect!);
-    prob = SDEProblem(F,G,init,(min(times...),max(times...)),p,saveat=times,adaptive =false,dt=10e-5)
+    prob = SDEProblem(F,G,init,(min(times...),max(times...)),p,saveat=times,adaptive =false,dt=10e-3)
     return prob,callback,[:M,:λ,:Mf]
 end
 

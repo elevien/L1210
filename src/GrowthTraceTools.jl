@@ -6,6 +6,7 @@ module GrowthTraceTools
     using ParameterHandling
     using DifferentialEquations
     using Distributions
+    using Base.Threads
 
     abstract type GpDecomp end
     #export solver_output_to_dataframe,build_model_OU,θOU,initOU

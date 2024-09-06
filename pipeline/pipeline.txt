@@ -1,9 +1,0 @@
-
-# preprocess smr data and run GP ----------------------------------------------------------------------
-julie --project=. ./pipeline/PAPER_preprocess.jl 
-julia --project=. ./pipeline/PAPER_run_gp.jl "./../output/data_processed.csv" "./../output/gp/data_8-30-24"
-
-# generate simulated data sets and run GP ------------------------------------------------------------ 
-julia --project=. ./pipeline/PAPER_generate_sims_OUfit.jl
-julia --project=. ./pipeline/PAPER_generate_sims.jl
-julia --project=. ./pipeline/PAPER_gp_pipeline.jl  "./../output/sims_OUfit.csv" "./output/gp/sims_OUfit"
