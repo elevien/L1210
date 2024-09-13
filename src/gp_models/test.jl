@@ -1,4 +1,5 @@
 
+# OUTDATED  --- NEEDS OVERHAUL TO CONFORM TO NEW OPTIMIZED CODE STRUCTURE
 
 name(m::TestModel) = "test_model"
 param_names(m::TestModel) = [:A1,:tau1,:A1,:tau2,:A_err]

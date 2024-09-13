@@ -4,10 +4,8 @@
 ########################################################################################
 
 struct Matern32Model <: GrowthTraceTools.GpDecomp end
-struct TestModel <: GrowthTraceTools.GpDecomp end
-struct OUModel <: GrowthTraceTools.GpDecomp end 
 struct Matern32NoTrendModel <: GrowthTraceTools.GpDecomp end
-struct CellSpecificMatern32Model <: GrowthTraceTools.GpDecomp end
+
 
 
 ########################################################################################
@@ -24,6 +22,4 @@ k_ou(x::Float64,y::Float64,A,tau)  = A*exp(-abs(x-y)/tau)
 # models
 ########################################################################################
 
-include("test.jl")
-include("ou.jl")
 include("matern32.jl")

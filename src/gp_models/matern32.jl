@@ -11,25 +11,27 @@ terms(m::Matern32Model) = ["cell","flucs","noise"]
 deriv_terms(m::Matern32Model) = terms(m)[[1,2]]
 
 
-function K(m::Matern32Model,term::String,x::Array{Float64,1},y::Array{Float64,1},lntheta)
-    T = terms(m)
-    theta = exp.(lntheta)
+function K(m::Matern32Model, T::Vector{String}, term::String, x::AbstractVector{Float64}, y::AbstractVector{Float64}, theta)
+    @inbounds begin
+        x1, x2, x3 = x[1], x[2], x[3]
+        y1, y2, y3 = y[1], y[2], y[3]
+    end
+
     if term == T[1]
-        return k_se(x[2],y[2],theta[1],theta[2])
+        return k_se(x2, y2, theta[1], theta[2])
     elseif term == T[2]
-        if x[3]==y[3] # if these come from the same cell
-            return k_m32(x[1],y[1],theta[3],theta[4])
+        if x3 == y3
+            return k_m32(x1, y1, theta[3], theta[4])
         else
-            0. #return theta[3]*exp(-abs(x[3]-y[3])*2.) #k_m32(0.,abs(y[1]-x[1])+3.,theta[3],theta[4])
+            return 0.0
         end
     else
-        return x==y ? theta[5] : 0
+        return (x1 == y1 && x2 == y2 && x3 == y3) ? theta[5] : 0.0
     end
 end
 
-function dK(m::Matern32Model,term::String,x::Array{Float64,1},y::Array{Float64,1},lntheta)
-    T = terms(m)
-    theta = exp.(lntheta)
+
+function dK(m::Matern32Model,T::Vector{String}, term::String,x::Array{Float64,1},y::Array{Float64,1},theta)
     if term == T[1]
         return dk_se(x[2],y[2],theta[1],theta[2])
     elseif term == T[2]
@@ -44,9 +46,7 @@ function dK(m::Matern32Model,term::String,x::Array{Float64,1},y::Array{Float64,1
 
 end
 
-function ddK(m::Matern32Model,term::String,x::Array{Float64,1},y::Array{Float64,1},lntheta)
-    T = terms(m)
-    theta = exp.(lntheta)
+function ddK(m::Matern32Model,T::Vector{String}, term::String,x::Array{Float64,1},y::Array{Float64,1},theta)
     if term == T[1]
         return ddk_se(x[2],y[2],theta[1],theta[2])
     elseif term == T[2]
@@ -69,19 +69,22 @@ terms(m::Matern32NoTrendModel) = ["flucs","noise"]
 deriv_terms(m::Matern32NoTrendModel) = terms(m)[[1]]
 
 
-function K(m::Matern32NoTrendModel,term::String,x::Array{Float64,1},y::Array{Float64,1},lntheta)
-    T = terms(m)
-    theta = exp.(lntheta)
+
+
+function K(m::Matern32NoTrendModel,T::Vector{String}, term::String, x::AbstractVector{Float64}, y::AbstractVector{Float64}, theta)
+    @inbounds begin
+        x1, x2, x3 = x[1], x[2], x[3]
+        y1, y2, y3 = y[1], y[2], y[3]
+    end
+
     if term == T[1]
         return k_m32(x[1],y[1],theta[1],theta[2])
     else
-        return x==y ? theta[3] : 0
+        return (x1 == y1 && x2 == y2 && x3 == y3) ? theta[3] : 0.0
     end
 end
 
-function dK(m::Matern32NoTrendModel,term::String,x::Array{Float64,1},y::Array{Float64,1},lntheta)
-    T = terms(m)
-    theta = exp.(lntheta)
+function dK(m::Matern32NoTrendModel,T::Vector{String}, term::String,x::Array{Float64,1},y::Array{Float64,1},theta)
     if term == T[1]
         return dk_m32(x[1],y[1],theta[1],theta[2])
     else
@@ -90,9 +93,8 @@ function dK(m::Matern32NoTrendModel,term::String,x::Array{Float64,1},y::Array{Fl
 
 end
 
-function ddK(m::Matern32NoTrendModel,term::String,x::Array{Float64,1},y::Array{Float64,1},lntheta)
-    T = terms(m)
-    theta = exp.(lntheta)
+function ddK(m::Matern32NoTrendModel,T::Vector{String}, term::String,x::Array{Float64,1},y::Array{Float64,1},theta)
+
     if term == T[1]
         return ddk_m32(x[1],y[1],theta[1],theta[2])
     else

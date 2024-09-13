@@ -19,7 +19,7 @@ function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
     # # 2: GAUSSIAN PROCESSES  -----------------------------------------------------------------------------------------------
 
     # setup
-    ops = Optim.Options(g_tol = 1e-5,iterations = 1000,store_trace = true,show_trace = false);
+    ops = Optim.Options(g_tol = 1e-4,iterations = 100,store_trace = true,show_trace = false);
 
 
     # run
@@ -27,35 +27,43 @@ function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
     param_dfs = []
     for lin in lineages
         println("running lineage "*string(lin)*"--------------")
-        # some new fields are needed in the data frames
-        df = data[data.lineage.==lin,:]
-        df[:,:time] = df[:,:time] .- df[:,:time][1]
-
-        GrowthTraceTools.get_gen_times!(df)
-
-        # now we make a uniform grid specifying the points at which to evaluate the GP
-        pred_df = GrowthTraceTools.uniform_prediction_array(df,dt_prediction)
-
-        # indices to use for optimizing hyperparameters
-        opt_inds = 1:5:min(4000,length(df.time)) 
-
-        # indices to use for interpolation
-        obs_inds = 1:2:length(df.time) #
-
-        # run GP prediction 
-        @time output = GrowthTraceTools.gp_predict(df,model,opt_inds,obs_inds,pred_df)
-        d = output[1]
-
-        # push
-        d[:,:lineage] = ones(length(d.time)) .*lin
-        push!(pred_dfs,d)
-        println(output[2])
-        println("")
-        push!(param_dfs,DataFrame(params=output[2]))
+        try
+            # some new fields are needed in the data frames
+            df = data[data.lineage .== lin, :]
+            df[:, :time] = df[:, :time] .- df[:, :time][1]
+    
+            GrowthTraceTools.get_gen_times!(df)
+    
+            # now we make a uniform grid specifying the points at which to evaluate the GP
+            pred_df = GrowthTraceTools.uniform_prediction_array(df, dt_prediction)
+    
+            # indices to use for optimizing hyperparameters
+            opt_inds = 1:5:min(4000, length(df.time))
+    
+            # indices to use for interpolation
+            obs_inds = 1:1:length(df.time)
+    
+            # run GP prediction 
+            alg = NelderMead()
+            @time d, results = GrowthTraceTools.gp_run(df, model, opt_inds, obs_inds, pred_df, ops, alg)
+            params = Optim.minimizer(results)
+    
+            # push
+            d[:, :lineage] = ones(length(d.time)) .* lin
+            push!(pred_dfs, d)
+            println(params)
+            println("")
+            push!(param_dfs, DataFrame(params = params))
+            
+        catch e
+            println(" *** Error encountered with lineage "*string(lin)*": ", e)
+            println(" *** Skipping lineage")
+        end
     end
     pred_df = vcat(pred_dfs...)
     param_df = vcat(param_dfs...)
 
+    pred_df[:,:age] = vcat([d.time .- d.time[1] for d in groupby(pred_df,[:lineage,:position])]...);
 
     mkpath(out_dir)
     CSV.write(out_dir*"/preds.csv",pred_df)
