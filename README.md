@@ -3,7 +3,7 @@
 
 ## Organization of this repository
 
-The ``src`` folder contains all of the core functionality used to generate simulations and figures. No code in this folder needs to be run directly. The ``pipeline`` folder, which contains the code to preprocess the data, generate simulations and run the Gaussian process.   All the analysis code, which produces the paper figures is in the ``notebooks`` folder. Only notebooks with names of the form ``PAPER_*`` are directly run to generate data and figures for the paper. The notebooks should be run after running the preprocessing and simulation pipeline as described below. The folder ``smr_dta`` contains the mass measurements from the suspended microchannel resonator. 
+The ``src`` folder contains all of the core functionality used to generate simulations and figures. No code in this folder needs to be run directly. The ``pipeline`` folder contains the code to preprocess the data, generate simulations and runs the Gaussian process.   All the analysis code, which produces the paper figures is in the ``notebooks`` folder. Only notebooks with names of the form ``PAPER_*`` are directly run to generate data and figures for the paper. The notebooks should be run after running the preprocessing and simulation pipeline as described below. The folder ``smr_dta`` contains the mass measurements from the suspended microchannel resonator (SMR). 
 
 ## How to run the data analysis
 
