@@ -1,11 +1,11 @@
-prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
+prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: XCB Dbe
 Description: XCB Double Buffer Extension
-Version: 1.16
+Version: 1.17.0
 Requires.private: xcb
 Libs: -L${libdir} -lxcb-dbe
 Cflags: -I${includedir}

@@ -10,23 +10,23 @@ build_time_vars = {'ABIFLAGS': '',
  'ANDROID_API_LEVEL': 0,
  'AR': 'ar',
  'ARFLAGS': 'rcs',
- 'BASECFLAGS': '-fno-strict-overflow',
+ 'BASECFLAGS': '-fno-strict-overflow -Wsign-compare -Wunreachable-code',
  'BASECPPFLAGS': '-IObjects -IInclude -IPython',
  'BASEMODLIBS': '',
- 'BINDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/bin',
- 'BINLIBDEST': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
+ 'BINDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/bin',
+ 'BINLIBDEST': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
  'BLDLIBRARY': 'libpython3.12.a',
  'BLDSHARED': 'clang -bundle -undefined '
               'dynamic_lookup '
               ''
               ''
-              '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-              '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+              '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+              '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
               ''
               ''
               ''
-              '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-              '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+              '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+              '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'BOOTSTRAP_HEADERS': '\\',
  'BUILDEXE': '.exe',
  'BUILDPYTHON': 'python.exe',
@@ -35,24 +35,25 @@ build_time_vars = {'ABIFLAGS': '',
  'BYTESTR_DEPS': '\\',
  'CC': 'clang',
  'CCSHARED': '',
- 'CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
+ 'CFLAGS': '-fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG '
+           '-O2 -Wall '
            ''
            '-fPIC  -O2  -isystem '
-           '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+           '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
            ''
            ''
            '-arch arm64  '
            ''
            '-fPIC  -O2  -isystem '
-           '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+           '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
            ''
            ''
            '-arch arm64 ',
  'CFLAGSFORSHARED': '',
  'CFLAGS_ALIASING': '-fno-strict-aliasing',
  'CFLAGS_NODIST': '',
- 'CODECS_COMMON_HEADERS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                          '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'CODECS_COMMON_HEADERS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                          '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'COMPILEALL_OPTS': '-j0',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
@@ -60,97 +61,99 @@ build_time_vars = {'ABIFLAGS': '',
                      ''
                      '-fPIC  -O2 '
                      '-isystem '
-                     '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                     '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                      ''
                      ''
                      '-arch arm64 ',
- 'CONFIGURE_CFLAGS_NODIST': '=full -std=c11 '
+ 'CONFIGURE_CFLAGS_NODIST': '=full -std=c11 -Wextra -Wno-unused-parameter '
+                            '-Wno-missing-field-initializers '
+                            '-Wstrict-prototypes '
                             '-Werror=implicit-function-declaration '
                             '-fvisibility=hidden',
  'CONFIGURE_CPPFLAGS': ''
                        ''
                        '-D_FORTIFY_SOURCE=2 -isystem '
-                       '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                       '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                        '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                       '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+                       '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'CONFIGURE_LDFLAGS': ''
                       ''
                       ''
-                      '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-                      '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+                      '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                      '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'CONFIGURE_LDFLAGS_NODIST': '=full -Wl,-export_dynamic '
                              '-Wl,-object_path_lto,"$@".lto -g',
  'CONFIGURE_LDFLAGS_NOLTO': '=thin',
- 'CONFIG_ARGS': "'--with-build-python=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python'"
-                "'--prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env'"
+ 'CONFIG_ARGS': "'--with-build-python=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python'"
+                "'--prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env'"
                 "'--build=x86_64-apple-darwin13.4.0'"
                 "'--host=arm64-apple-darwin20.0.0''--enable-ipv6'"
                 "'--with-ensurepip=no'"
-                "'--with-tzpath=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo:/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/tzinfo'"
+                "'--with-tzpath=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo:/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/tzinfo'"
                 "'--with-computed-gotos''--with-system-expat'"
                 "'--enable-loadable-sqlite-extensions'"
-                "'--with-tcltk-includes=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include'"
-                "'--with-tcltk-libs=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib "
+                "'--with-tcltk-includes=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include'"
+                "'--with-tcltk-libs=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib "
                 "-ltcl8.6 -ltk8.6''--with-platlibdir=lib''--with-lto=full'"
-                "'-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include'"
+                "'-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include'"
                 "'--disable-shared''build_alias=x86_64-apple-darwin13.4.0'"
                 "'host_alias=arm64-apple-darwin20.0.0'"
-                "'PKG_CONFIG_PATH=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/pkgconfig'"
+                "'PKG_CONFIG_PATH=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/pkgconfig'"
                 "'MACHDEP=darwin''CC=clang'"
                 "'CFLAGS="
                 ''
                 '-fPIC  -O2  '
                 '-isystem '
-                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                 ''
                 ''
                 "-arch arm64 ''LDFLAGS="
                 ''
                 ''
-                '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-                "-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib'"
+                '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                "-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib'"
                 "'CPPFLAGS="
                 ''
                 '-D_FORTIFY_SOURCE=2 -isystem '
-                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                 '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                "-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include'",
- 'CONFINCLUDEDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'CONFINCLUDEPY': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12',
+                "-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include'",
+ 'CONFINCLUDEDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'CONFINCLUDEPY': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12',
  'COREPYTHONPATH': '',
- 'COVERAGE_INFO': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static/coverage.info',
+ 'COVERAGE_INFO': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static/coverage.info',
  'COVERAGE_LCOV_OPTIONS': '--rc lcov_branch_coverage=1',
- 'COVERAGE_REPORT': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static/lcov-report',
+ 'COVERAGE_REPORT': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--rc lcov_branch_coverage=1 --branch-coverage '
                             '--title "CPython 3.12 LCOV report [commit $(shell '
                             ')]"',
  'CPPFLAGS': '-IObjects -IInclude -IPython -I. '
-             '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+             '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
              ''
              ''
              '-D_FORTIFY_SOURCE=2 -isystem '
-             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
              '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
              ''
              ''
              '-D_FORTIFY_SOURCE=2 -isystem '
-             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
              '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'CXX': 'clang++',
  'DEEPFREEZE_C': 'Python/deepfreeze/deepfreeze.c',
- 'DEEPFREEZE_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Tools/build/deepfreeze.py '
-                    '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Programs/_freeze_module.py '
+ 'DEEPFREEZE_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Tools/build/deepfreeze.py '
+                    '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Programs/_freeze_module.py '
                     '\\',
  'DEEPFREEZE_OBJS': 'Python/deepfreeze/deepfreeze.o',
- 'DESTDIRS': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env '
-             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12 '
-             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/lib-dynload',
- 'DESTLIB': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
+ 'DESTDIRS': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env '
+             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12 '
+             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/lib-dynload',
+ 'DESTLIB': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
  'DESTPATH': '',
- 'DESTSHARED': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/lib-dynload',
+ 'DESTSHARED': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/lib-dynload',
  'DFLAGS': '',
  'DIRMODE': 755,
  'DIST': 'README.rst ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
@@ -174,19 +177,19 @@ build_time_vars = {'ABIFLAGS': '',
  'ENSUREPIP': 'no',
  'EXE': '',
  'EXEMODE': 755,
- 'EXENAME': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/bin/python3.12',
+ 'EXENAME': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/bin/python3.12',
  'EXPORTSFROM': '',
  'EXPORTSYMS': '',
  'EXTRATESTOPTS': '',
  'EXT_SUFFIX': '.cpython-312-darwin.so',
  'FILEMODE': 644,
  'FLOAT_WORDS_BIGENDIAN': 0,
- 'FREEZE_MODULE': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python '
-                  '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Programs/_freeze_module.py',
- 'FREEZE_MODULE_BOOTSTRAP': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python '
-                            '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Programs/_freeze_module.py',
- 'FREEZE_MODULE_BOOTSTRAP_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Programs/_freeze_module.py',
- 'FREEZE_MODULE_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Programs/_freeze_module.py',
+ 'FREEZE_MODULE': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python '
+                  '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Programs/_freeze_module.py',
+ 'FREEZE_MODULE_BOOTSTRAP': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python '
+                            '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Programs/_freeze_module.py',
+ 'FREEZE_MODULE_BOOTSTRAP_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Programs/_freeze_module.py',
+ 'FREEZE_MODULE_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Programs/_freeze_module.py',
  'FROZEN_FILES_IN': '\\',
  'FROZEN_FILES_OUT': '\\',
  'GETPGRP_HAVE_ARG': 0,
@@ -684,12 +687,12 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE__GETPTY': 0,
  'HOSTRUNNER': '',
  'HOST_GNU_TYPE': 'aarch64-apple-darwin20.0.0',
- 'INCLDIRSTOMAKE': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12 '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12',
- 'INCLUDEDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'INCLUDEPY': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12',
+ 'INCLDIRSTOMAKE': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12 '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12',
+ 'INCLUDEDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'INCLUDEPY': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/python3.12',
  'INSTALL': '/usr/bin/install -c',
  'INSTALL_DATA': '/usr/bin/install -c -m 644',
  'INSTALL_PROGRAM': '/usr/bin/install -c',
@@ -699,17 +702,26 @@ build_time_vars = {'ABIFLAGS': '',
  'IO_H': 'Modules/_io/_iomodule.h',
  'IO_OBJS': '\\',
  'LDCXXSHARED': 'clang++ -bundle -undefined '
-                'dynamic_lookup',
+                'dynamic_lookup '
+                ''
+                ''
+                '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                ''
+                ''
+                ''
+                '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'LDFLAGS': ''
             ''
             ''
-            '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-            '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+            '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+            '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
             ''
             ''
             ''
-            '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-            '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+            '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+            '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'LDFLAGS_NODIST': '',
  'LDLIBRARY': 'libpython3.12.a',
  'LDLIBRARYDIR': '',
@@ -717,131 +729,137 @@ build_time_vars = {'ABIFLAGS': '',
              ''
              ''
              ''
-             '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-             '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+             '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+             '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
              ''
              ''
              ''
-             '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-             '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+             '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+             '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'LDVERSION': '3.12',
  'LIBC': '',
- 'LIBDEST': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
- 'LIBDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+ 'LIBDEST': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
+ 'LIBDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'LIBEXPAT_A': 'Modules/expat/libexpat.a',
- 'LIBEXPAT_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
+ 'LIBEXPAT_CFLAGS': '-fno-strict-overflow -Wsign-compare -Wunreachable-code '
+                    '-DNDEBUG -O2 -Wall '
                     ''
                     '-fPIC  -O2  '
                     '-isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     ''
                     ''
                     '-arch arm64  '
                     ''
                     '-fPIC  -O2  '
                     '-isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     ''
                     ''
-                    '-arch arm64  =full -std=c11 '
-                    '-Werror=implicit-function-declaration '
+                    '-arch arm64  =full -std=c11 -Wextra '
+                    '-Wno-unused-parameter -Wno-missing-field-initializers '
+                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
                     '-fvisibility=hidden  '
-                    '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal '
+                    '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal '
                     '-IObjects -IInclude -IPython -I. '
-                    '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                    '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'LIBEXPAT_HEADERS': '\\',
  'LIBEXPAT_OBJS': '\\',
- 'LIBHACL_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/include '
+ 'LIBHACL_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/include '
                    '-D_BSD_SOURCE -D_DEFAULT_SOURCE -fno-strict-overflow '
-                   '-DNDEBUG -O2 -Wall '
+                   '-Wsign-compare -Wunreachable-code -DNDEBUG -O2 -Wall '
+                   ''
                    ''
                    '-fPIC  -O2  '
                    '-isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    ''
                    ''
                    '-arch arm64  '
                    ''
                    '-fPIC  -O2  '
                    '-isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    ''
                    ''
-                   '-arch arm64  =full -std=c11 '
-                   '-Werror=implicit-function-declaration -fvisibility=hidden  '
-                   '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal '
+                   '-arch arm64  =full -std=c11 -Wextra '
+                   '-Wno-unused-parameter -Wno-missing-field-initializers '
+                   '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                   '-fvisibility=hidden  '
+                   '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal '
                    '-IObjects -IInclude -IPython -I. '
-                   '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                   '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                    ''
                    ''
                    '-D_FORTIFY_SOURCE=2 -isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    ''
                    ''
                    '-D_FORTIFY_SOURCE=2 -isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'LIBHACL_HEADERS': '\\',
  'LIBHACL_SHA2_A': 'Modules/_hacl/libHacl_Hash_SHA2.a',
  'LIBHACL_SHA2_HEADERS': '\\',
  'LIBHACL_SHA2_OBJS': '\\',
  'LIBM': '',
  'LIBMPDEC_A': 'Modules/_decimal/libmpdec/libmpdec.a',
- 'LIBMPDEC_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_decimal/libmpdec '
-                    '-DUNIVERSAL=1 -fno-strict-overflow -DNDEBUG -O2 -Wall '
-                    ''
+ 'LIBMPDEC_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_decimal/libmpdec '
+                    '-DUNIVERSAL=1 -fno-strict-overflow -Wsign-compare '
+                    '-Wunreachable-code -DNDEBUG -O2 -Wall '
                     ''
                     '-fPIC  -O2  '
                     '-isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     ''
                     ''
                     '-arch arm64  '
                     ''
                     '-fPIC  -O2  '
                     '-isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     ''
                     ''
-                    '-arch arm64  =full -std=c11 '
-                    '-Werror=implicit-function-declaration '
+                    '-arch arm64  =full -std=c11 -Wextra '
+                    '-Wno-unused-parameter -Wno-missing-field-initializers '
+                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
                     '-fvisibility=hidden  '
-                    '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal '
+                    '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal '
                     '-IObjects -IInclude -IPython -I. '
-                    '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                    '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     ''
                     ''
                     '-D_FORTIFY_SOURCE=2 -isystem '
-                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                    '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                     '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+                    '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'LIBMPDEC_HEADERS': '\\',
  'LIBMPDEC_OBJS': '\\',
  'LIBOBJDIR': 'Python/',
  'LIBOBJS': '',
- 'LIBPC': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/pkgconfig',
- 'LIBPL': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/config-3.12-darwin',
+ 'LIBPC': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/pkgconfig',
+ 'LIBPL': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/config-3.12-darwin',
  'LIBPYTHON': '',
  'LIBRARY': 'libpython3.12.a',
  'LIBRARY_DEPS': 'libpython3.12.a',
@@ -857,20 +875,20 @@ build_time_vars = {'ABIFLAGS': '',
  'LIPO_INTEL64_FLAGS': '',
  'LLVM_PROF_ERR': 'no',
  'LLVM_PROF_FILE': 'LLVM_PROFILE_FILE="$(shell pwd)/code-%p.profclangr"',
- 'LLVM_PROF_MERGER': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/_build_env/bin/llvm-profdata '
+ 'LLVM_PROF_MERGER': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/_build_env/bin/llvm-profdata '
                      'merge -output="$(shell pwd)/code.profclangd" "$(shell '
                      'pwd)"/*.profclangr',
  'LN': 'ln',
  'LOCALMODLIBS': '',
  'MACHDEP': 'darwin',
  'MACHDEP_OBJS': '',
- 'MACHDESTLIB': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
+ 'MACHDESTLIB': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12',
  'MACOSX_DEPLOYMENT_TARGET': '11.0',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 0,
- 'MAKESETUP': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/makesetup',
- 'MANDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/man',
- 'MKDIR_P': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/install-sh '
+ 'MAKESETUP': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/makesetup',
+ 'MANDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/man',
+ 'MKDIR_P': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/install-sh '
             '-c -d',
  'MODBUILT_NAMES': 'array  _asyncio  _bisect  _contextvars  _csv  _heapq  '
                    '_json  _lsprof  _opcode  _pickle  _queue  _random  '
@@ -926,11 +944,11 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_AUDIOOP_LDFLAGS': '',
  'MODULE_AUDIOOP_STATE': 'yes',
  'MODULE_BINASCII_CFLAGS': '-DUSE_ZLIB_CRC32 '
-                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'MODULE_BINASCII_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'MODULE_BINASCII_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                             '-lz',
  'MODULE_BINASCII_STATE': 'yes',
- 'MODULE_CMATH_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_math.h',
+ 'MODULE_CMATH_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_math.h',
  'MODULE_CMATH_LDFLAGS': '',
  'MODULE_CMATH_STATE': 'yes',
  'MODULE_DEPS_SHARED': 'Modules/config.c',
@@ -941,7 +959,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_FCNTL_STATE': 'yes',
  'MODULE_GRP_STATE': 'yes',
  'MODULE_ITERTOOLS_LDFLAGS': '',
- 'MODULE_MATH_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_math.h',
+ 'MODULE_MATH_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_math.h',
  'MODULE_MATH_LDFLAGS': '',
  'MODULE_MATH_STATE': 'yes',
  'MODULE_MMAP_STATE': 'yes',
@@ -958,10 +976,10 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_PYEXPAT_LDFLAGS': '-lexpat',
  'MODULE_PYEXPAT_STATE': 'yes',
  'MODULE_READLINE_CFLAGS': '-D_DARWIN_C_SOURCE '
-                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
-                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncurses '
-                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'MODULE_READLINE_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncurses '
+                           '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'MODULE_READLINE_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                             '-lreadline',
  'MODULE_READLINE_STATE': 'yes',
  'MODULE_RESOURCE_STATE': 'yes',
@@ -971,70 +989,70 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_TERMIOS_STATE': 'yes',
  'MODULE_TIME_LDFLAGS': '',
  'MODULE_TIME_STATE': 'yes',
- 'MODULE_UNICODEDATA_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/unicodedata_db.h '
-                            '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/unicodename_db.h',
+ 'MODULE_UNICODEDATA_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/unicodedata_db.h '
+                            '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/unicodename_db.h',
  'MODULE_UNICODEDATA_STATE': 'yes',
  'MODULE_XXLIMITED_35_STATE': 'yes',
  'MODULE_XXLIMITED_STATE': 'yes',
  'MODULE_XXSUBTYPE_STATE': 'yes',
- 'MODULE_ZLIB_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'MODULE_ZLIB_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+ 'MODULE_ZLIB_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'MODULE_ZLIB_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                         '-lz',
  'MODULE_ZLIB_STATE': 'yes',
  'MODULE__ABC_LDFLAGS': '',
  'MODULE__ASYNCIO_STATE': 'yes',
  'MODULE__BISECT_STATE': 'yes',
  'MODULE__BLAKE2_CFLAGS': '',
- 'MODULE__BLAKE2_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2-config.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2-impl.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2b-load-sse2.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2b-load-sse41.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2b-ref.c '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2b-round.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2b.c '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2s-load-sse2.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2s-load-sse41.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2s-load-xop.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2s-ref.c '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2s-round.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/impl/blake2s.c '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_blake2/blake2module.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/hashlib.h',
+ 'MODULE__BLAKE2_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2-config.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2-impl.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2b-load-sse2.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2b-load-sse41.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2b-ref.c '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2b-round.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2b.c '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2s-load-sse2.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2s-load-sse41.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2s-load-xop.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2s-ref.c '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2s-round.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/impl/blake2s.c '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_blake2/blake2module.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/hashlib.h',
  'MODULE__BLAKE2_LDFLAGS': '',
  'MODULE__BLAKE2_STATE': 'yes',
  'MODULE__BZ2_CFLAGS': '',
  'MODULE__BZ2_LDFLAGS': '-lbz2',
  'MODULE__BZ2_STATE': 'yes',
- 'MODULE__CODECS_CN_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_cn.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_CN_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_cn.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_CN_STATE': 'yes',
- 'MODULE__CODECS_HK_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_hk.h  '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_HK_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_hk.h  '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_HK_STATE': 'yes',
- 'MODULE__CODECS_ISO2022_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
-                                '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/alg_jisx0201.h '
-                                '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
-                                '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                                '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_ISO2022_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
+                                '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/alg_jisx0201.h '
+                                '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
+                                '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                                '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_ISO2022_STATE': 'yes',
- 'MODULE__CODECS_JP_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/alg_jisx0201.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_jp.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_JP_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_jisx0213_pair.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/alg_jisx0201.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/emu_jisx0213_2000.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_jp.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_JP_STATE': 'yes',
- 'MODULE__CODECS_KR_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_kr.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_KR_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_kr.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_KR_STATE': 'yes',
  'MODULE__CODECS_LDFLAGS': '',
- 'MODULE__CODECS_TW_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/mappings_tw.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h '
-                           '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/cjkcodecs.h',
+ 'MODULE__CODECS_TW_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/mappings_tw.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h '
+                           '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/cjkcodecs.h',
  'MODULE__CODECS_TW_STATE': 'yes',
  'MODULE__COLLECTIONS_LDFLAGS': '',
  'MODULE__CONTEXTVARS_STATE': 'yes',
@@ -1043,43 +1061,43 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__CRYPT_STATE': 'yes',
  'MODULE__CSV_STATE': 'yes',
  'MODULE__CTYPES_CFLAGS': '-fno-strict-overflow '
-                          '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                          '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                           '-DUSING_APPLE_OS_LIBFFI=0 '
                           '-DUSING_MALLOC_CLOSURE_DOT_C=1',
- 'MODULE__CTYPES_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ctypes/ctypes.h',
+ 'MODULE__CTYPES_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ctypes/ctypes.h',
  'MODULE__CTYPES_LDFLAGS': '-lffi -ldl',
  'MODULE__CTYPES_MALLOC_CLOSURE': '_ctypes/malloc_closure.c',
  'MODULE__CTYPES_STATE': 'yes',
  'MODULE__CTYPES_TEST_LDFLAGS': '',
  'MODULE__CTYPES_TEST_STATE': 'yes',
  'MODULE__CURSES_CFLAGS': '-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR '
-                          '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
-                          '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                          '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
+                          '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                           '-D_XOPEN_SOURCE_EXTENDED=1',
- 'MODULE__CURSES_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+ 'MODULE__CURSES_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                            ''
                            ''
-                           '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                           '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                            '-Wl,-search_paths_first -lncursesw -ltinfow',
  'MODULE__CURSES_PANEL_CFLAGS': '-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR '
                                 '-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR '
-                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
-                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
-                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
-                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
+                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
+                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                                 '-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR '
-                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
-                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw '
+                                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                                 '-D_XOPEN_SOURCE_EXTENDED=1',
- 'MODULE__CURSES_PANEL_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+ 'MODULE__CURSES_PANEL_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                                  ''
                                  ''
-                                 '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                                 '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                                  '-Wl,-search_paths_first -lpanelw '
-                                 '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                                 '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                                  ''
                                  ''
-                                 '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                                 '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                                  '-Wl,-search_paths_first -lncursesw -ltinfow',
  'MODULE__CURSES_PANEL_STATE': 'yes',
  'MODULE__CURSES_STATE': 'yes',
@@ -1088,49 +1106,49 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__DBM_CFLAGS': '-DUSE_NDBM',
  'MODULE__DBM_LDFLAGS': '',
  'MODULE__DBM_STATE': 'yes',
- 'MODULE__DECIMAL_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_decimal/libmpdec '
+ 'MODULE__DECIMAL_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_decimal/libmpdec '
                            '-DUNIVERSAL=1',
- 'MODULE__DECIMAL_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_decimal/docstrings.h '
+ 'MODULE__DECIMAL_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_decimal/docstrings.h '
                          '\\ Modules/_decimal/libmpdec/libmpdec.a',
  'MODULE__DECIMAL_LDFLAGS': '-lm Modules/_decimal/libmpdec/libmpdec.a',
  'MODULE__DECIMAL_STATE': 'yes',
  'MODULE__ELEMENTTREE_CFLAGS': '',
- 'MODULE__ELEMENTTREE_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/pyexpat.c',
+ 'MODULE__ELEMENTTREE_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/pyexpat.c',
  'MODULE__ELEMENTTREE_STATE': 'yes',
  'MODULE__FUNCTOOLS_LDFLAGS': '',
  'MODULE__GDBM_STATE': 'missing',
- 'MODULE__HASHLIB_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'MODULE__HASHLIB_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/hashlib.h',
- 'MODULE__HASHLIB_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib   '
+ 'MODULE__HASHLIB_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'MODULE__HASHLIB_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/hashlib.h',
+ 'MODULE__HASHLIB_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib   '
                             '-lcrypto',
  'MODULE__HASHLIB_STATE': 'yes',
  'MODULE__HEAPQ_STATE': 'yes',
- 'MODULE__IO_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_io',
- 'MODULE__IO_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_io/_iomodule.h',
+ 'MODULE__IO_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_io',
+ 'MODULE__IO_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_io/_iomodule.h',
  'MODULE__IO_LDFLAGS': '',
  'MODULE__IO_STATE': 'yes',
  'MODULE__JSON_STATE': 'yes',
  'MODULE__LOCALE_LDFLAGS': '',
  'MODULE__LSPROF_STATE': 'yes',
- 'MODULE__LZMA_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'MODULE__LZMA_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+ 'MODULE__LZMA_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'MODULE__LZMA_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                          '-llzma',
  'MODULE__LZMA_STATE': 'yes',
- 'MODULE__MD5_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/include '
-                       '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/internal '
+ 'MODULE__MD5_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/include '
+                       '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/internal '
                        '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
- 'MODULE__MD5_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/hashlib.h '
+ 'MODULE__MD5_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/hashlib.h '
                      '\\ Modules/_hacl/Hacl_Hash_MD5.h '
                      'Modules/_hacl/Hacl_Hash_MD5.c',
  'MODULE__MD5_STATE': 'yes',
- 'MODULE__MULTIBYTECODEC_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/cjkcodecs/multibytecodec.h',
+ 'MODULE__MULTIBYTECODEC_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/cjkcodecs/multibytecodec.h',
  'MODULE__MULTIBYTECODEC_STATE': 'yes',
- 'MODULE__MULTIPROCESSING_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_multiprocessing',
+ 'MODULE__MULTIPROCESSING_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_multiprocessing',
  'MODULE__MULTIPROCESSING_STATE': 'yes',
  'MODULE__OPCODE_STATE': 'yes',
  'MODULE__OPERATOR_LDFLAGS': '',
  'MODULE__PICKLE_STATE': 'yes',
- 'MODULE__POSIXSHMEM_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_multiprocessing',
+ 'MODULE__POSIXSHMEM_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_multiprocessing',
  'MODULE__POSIXSHMEM_LDFLAGS': '',
  'MODULE__POSIXSHMEM_STATE': 'yes',
  'MODULE__POSIXSUBPROCESS_STATE': 'yes',
@@ -1139,52 +1157,52 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__SCPROXY_LDFLAGS': '-framework SystemConfiguration -framework '
                             'CoreFoundation',
  'MODULE__SCPROXY_STATE': 'yes',
- 'MODULE__SHA1_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/include '
-                        '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/internal '
+ 'MODULE__SHA1_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/include '
+                        '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/internal '
                         '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
- 'MODULE__SHA1_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/hashlib.h '
+ 'MODULE__SHA1_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/hashlib.h '
                       '\\ Modules/_hacl/Hacl_Hash_SHA1.h '
                       'Modules/_hacl/Hacl_Hash_SHA1.c',
  'MODULE__SHA1_STATE': 'yes',
- 'MODULE__SHA2_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/include '
-                        '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_hacl/internal '
+ 'MODULE__SHA2_CFLAGS': '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/include '
+                        '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_hacl/internal '
                         '-D_BSD_SOURCE -D_DEFAULT_SOURCE',
- 'MODULE__SHA2_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/hashlib.h '
+ 'MODULE__SHA2_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/hashlib.h '
                       '\\ Modules/_hacl/libHacl_Hash_SHA2.a',
  'MODULE__SHA2_STATE': 'yes',
- 'MODULE__SHA3_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/hashlib.h '
+ 'MODULE__SHA3_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/hashlib.h '
                       '\\ Modules/_hacl/Hacl_Hash_SHA3.h '
                       'Modules/_hacl/Hacl_Hash_SHA3.c',
  'MODULE__SHA3_STATE': 'yes',
  'MODULE__SIGNAL_LDFLAGS': '',
- 'MODULE__SOCKET_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/socketmodule.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/addrinfo.h '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/getaddrinfo.c '
-                        '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/getnameinfo.c',
+ 'MODULE__SOCKET_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/socketmodule.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/addrinfo.h '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/getaddrinfo.c '
+                        '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/getnameinfo.c',
  'MODULE__SOCKET_STATE': 'yes',
- 'MODULE__SQLITE3_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
-                           '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite',
- 'MODULE__SQLITE3_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/connection.h '
-                         '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/cursor.h '
-                         '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/microprotocols.h '
-                         '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/module.h '
-                         '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/prepare_protocol.h '
-                         '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/row.h '
-                         '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_sqlite/util.h',
- 'MODULE__SQLITE3_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+ 'MODULE__SQLITE3_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                           '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite',
+ 'MODULE__SQLITE3_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/connection.h '
+                         '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/cursor.h '
+                         '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/microprotocols.h '
+                         '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/module.h '
+                         '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/prepare_protocol.h '
+                         '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/row.h '
+                         '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_sqlite/util.h',
+ 'MODULE__SQLITE3_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                             '-lsqlite3',
  'MODULE__SQLITE3_STATE': 'yes',
  'MODULE__SRE_LDFLAGS': '',
- 'MODULE__SSL_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
- 'MODULE__SSL_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl.h '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl/cert.c '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl/debughelpers.c '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl/misc.c '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl_data.h '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl_data_111.h '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_ssl_data_300.h '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/socketmodule.h',
- 'MODULE__SSL_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib  '
+ 'MODULE__SSL_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+ 'MODULE__SSL_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl.h '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl/cert.c '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl/debughelpers.c '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl/misc.c '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl_data.h '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl_data_111.h '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_ssl_data_300.h '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/socketmodule.h',
+ 'MODULE__SSL_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib  '
                         '-lssl -lcrypto',
  'MODULE__SSL_STATE': 'yes',
  'MODULE__STATISTICS_LDFLAGS': '',
@@ -1193,18 +1211,18 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__STRUCT_STATE': 'yes',
  'MODULE__SYMTABLE_LDFLAGS': '',
  'MODULE__TESTBUFFER_STATE': 'yes',
- 'MODULE__TESTCAPI_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_testcapi/testcapi_long.h '
-                          '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_testcapi/parts.h '
-                          '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/_testcapi/util.h',
+ 'MODULE__TESTCAPI_DEPS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_testcapi/testcapi_long.h '
+                          '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_testcapi/parts.h '
+                          '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/_testcapi/util.h',
  'MODULE__TESTCAPI_STATE': 'yes',
  'MODULE__TESTCLINIC_STATE': 'yes',
  'MODULE__TESTIMPORTMULTIPLE_STATE': 'yes',
  'MODULE__TESTINTERNALCAPI_STATE': 'yes',
  'MODULE__TESTMULTIPHASE_STATE': 'yes',
  'MODULE__THREAD_LDFLAGS': '',
- 'MODULE__TKINTER_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+ 'MODULE__TKINTER_CFLAGS': '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                            '-Wno-strict-prototypes -DWITH_APPINIT=1',
- 'MODULE__TKINTER_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+ 'MODULE__TKINTER_LDFLAGS': '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                             '-ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6',
  'MODULE__TKINTER_STATE': 'yes',
  'MODULE__TRACEMALLOC_LDFLAGS': '',
@@ -1251,194 +1269,205 @@ build_time_vars = {'ABIFLAGS': '',
  'PYTHONFRAMEWORKINSTALLDIR': '',
  'PYTHONFRAMEWORKPREFIX': '',
  'PYTHONPATH': '',
- 'PYTHON_FOR_BUILD': '_PYTHON_PROJECT_BASE=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static '
+ 'PYTHON_FOR_BUILD': '_PYTHON_PROJECT_BASE=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static '
                      '_PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) '
                      'PYTHONPATH=$(shell test -f pybuilddir.txt && echo '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static/`cat '
-                     'pybuilddir.txt`:)/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Lib '
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static/`cat '
+                     'pybuilddir.txt`:)/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Lib '
                      '_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__darwin_darwin '
-                     '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python',
+                     '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python',
  'PYTHON_FOR_BUILD_DEPS': '',
- 'PYTHON_FOR_FREEZE': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python',
+ 'PYTHON_FOR_FREEZE': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python',
  'PYTHON_FOR_REGEN': '',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_BUILTIN_HASHLIB_HASHES': '"md5,sha1,sha2,sha3,blake2"',
- 'PY_BUILTIN_MODULE_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
-                             ''
+ 'PY_BUILTIN_MODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare '
+                             '-Wunreachable-code -DNDEBUG -O2 -Wall '
                              ''
                              '-fPIC  '
                              '-O2  -isystem '
-                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                              ''
                              ''
                              '-arch arm64  '
                              ''
                              '-fPIC  '
                              '-O2  -isystem '
-                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                              ''
                              ''
-                             '-arch arm64  =full -std=c11 '
+                             '-arch arm64  =full -std=c11 -Wextra '
+                             '-Wno-unused-parameter '
+                             '-Wno-missing-field-initializers '
+                             '-Wstrict-prototypes '
                              '-Werror=implicit-function-declaration '
                              '-fvisibility=hidden  '
-                             '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal '
+                             '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal '
                              '-IObjects -IInclude -IPython -I. '
-                             '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                             '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                              ''
                              ''
                              '-D_FORTIFY_SOURCE=2 -isystem '
-                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                              '-mmacosx-version-min=11.0 '
                              '-mmacosx-version-min=11.0 '
-                             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                              ''
                              ''
                              '-D_FORTIFY_SOURCE=2 -isystem '
-                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                             '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                              '-mmacosx-version-min=11.0 '
                              '-mmacosx-version-min=11.0 '
-                             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                             '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                              '-DPy_BUILD_CORE_BUILTIN',
- 'PY_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
+ 'PY_CFLAGS': '-fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG '
+              '-O2 -Wall '
               ''
               '-fPIC  -O2  '
               '-isystem '
-              '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+              '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
               ''
               ''
               '-arch arm64  '
               ''
               '-fPIC  -O2  '
               '-isystem '
-              '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+              '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
               ''
               ''
               '-arch arm64 ',
- 'PY_CFLAGS_NODIST': '=full -std=c11 '
+ 'PY_CFLAGS_NODIST': '=full -std=c11 -Wextra -Wno-unused-parameter '
+                     '-Wno-missing-field-initializers -Wstrict-prototypes '
                      '-Werror=implicit-function-declaration '
                      '-fvisibility=hidden  '
-                     '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal',
+                     '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal',
  'PY_COERCE_C_LOCALE': 1,
- 'PY_CORE_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
+ 'PY_CORE_CFLAGS': '-fno-strict-overflow -Wsign-compare -Wunreachable-code '
+                   '-DNDEBUG -O2 -Wall '
                    ''
                    '-fPIC  -O2  '
                    '-isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    ''
                    ''
                    '-arch arm64  '
                    ''
                    '-fPIC  -O2  '
                    '-isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    ''
                    ''
-                   '-arch arm64  =full -std=c11 '
-                   '-Werror=implicit-function-declaration -fvisibility=hidden  '
-                   '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal '
+                   '-arch arm64  =full -std=c11 -Wextra '
+                   '-Wno-unused-parameter -Wno-missing-field-initializers '
+                   '-Wstrict-prototypes -Werror=implicit-function-declaration '
+                   '-fvisibility=hidden  '
+                   '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal '
                    '-IObjects -IInclude -IPython -I. '
-                   '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                   '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                    ''
                    ''
                    '-D_FORTIFY_SOURCE=2 -isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    ''
                    ''
                    '-D_FORTIFY_SOURCE=2 -isystem '
-                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                   '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                    '-DPy_BUILD_CORE',
  'PY_CORE_LDFLAGS': ''
                     ''
                     ''
-                    '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-                    '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                    '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                    '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                     ''
                     ''
                     ''
-                    '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-                    '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                    '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                    '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                     '=full -Wl,-export_dynamic '
                     '-Wl,-object_path_lto,"$@".lto -g',
  'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
-                '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                 ''
                 ''
                 '-D_FORTIFY_SOURCE=2 -isystem '
-                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                 '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                 ''
                 ''
                 '-D_FORTIFY_SOURCE=2 -isystem '
-                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                 '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+                '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'PY_ENABLE_SHARED': 0,
  'PY_HAVE_PERF_TRAMPOLINE': 0,
  'PY_LDFLAGS': ''
                ''
                ''
-               '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-               '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+               '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+               '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                ''
                ''
                ''
-               '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-               '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+               '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+               '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'PY_LDFLAGS_NODIST': '=full -Wl,-export_dynamic '
                       '-Wl,-object_path_lto,"$@".lto -g',
  'PY_LDFLAGS_NOLTO': ''
                      ''
                      ''
-                     '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-                     '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                     '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                     '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                      ''
                      ''
                      ''
-                     '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
-                     '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                     '-Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
+                     '-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib '
                      '=thin',
  'PY_SQLITE_ENABLE_LOAD_EXTENSION': 1,
  'PY_SQLITE_HAVE_SERIALIZE': 1,
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
- 'PY_STDMODULE_CFLAGS': '-fno-strict-overflow -DNDEBUG -O2 -Wall '
+ 'PY_STDMODULE_CFLAGS': '-fno-strict-overflow -Wsign-compare '
+                        '-Wunreachable-code -DNDEBUG -O2 -Wall '
                         ''
                         '-fPIC  -O2 '
                         '-isystem '
-                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                         ''
                         ''
                         '-arch arm64  '
                         ''
                         '-fPIC  -O2 '
                         '-isystem '
-                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                         ''
                         ''
-                        '-arch arm64  =full -std=c11 '
+                        '-arch arm64  =full -std=c11 -Wextra '
+                        '-Wno-unused-parameter -Wno-missing-field-initializers '
+                        '-Wstrict-prototypes '
                         '-Werror=implicit-function-declaration '
                         '-fvisibility=hidden  '
-                        '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include/internal '
+                        '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include/internal '
                         '-IObjects -IInclude -IPython -I. '
-                        '-I/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Include '
+                        '-I/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Include '
                         ''
                         ''
                         '-D_FORTIFY_SOURCE=2 -isystem '
-                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                         '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                        '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                        '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                         ''
                         ''
                         '-D_FORTIFY_SOURCE=2 -isystem '
-                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
+                        '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include '
                         '-mmacosx-version-min=11.0 -mmacosx-version-min=11.0 '
-                        '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
+                        '-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include',
  'PY_SUPPORT_TIER': 2,
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 0,
@@ -1450,7 +1479,7 @@ build_time_vars = {'ABIFLAGS': '',
  'RESSRCDIR': 'Mac/Resources/framework',
  'RETSIGTYPE': 'void',
  'RUNSHARED': '',
- 'SCRIPTDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
+ 'SCRIPTDIR': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib',
  'SCRIPT_2TO3': 'build/scripts-3.12/2to3-3.12',
  'SCRIPT_IDLE': 'build/scripts-3.12/idle3.12',
  'SCRIPT_PYDOC': 'build/scripts-3.12/pydoc3.12',
@@ -1562,7 +1591,7 @@ build_time_vars = {'ABIFLAGS': '',
             'Modules/_testcapi   Modules/_xxtestfuzz   Modules/cjkcodecs   '
             'Modules/expat   Objects   Parser   Programs   Python   '
             'Python/frozen_modules   Python/deepfreeze',
- 'SRC_GDB_HOOKS': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Tools/gdb/libpython.py',
+ 'SRC_GDB_HOOKS': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Tools/gdb/libpython.py',
  'STATIC_LIBPYTHON': 1,
  'STDC_HEADERS': 1,
  'STRICT_SYSV_CURSES': "/* Don't use ncurses extensions */",
@@ -1573,37 +1602,37 @@ build_time_vars = {'ABIFLAGS': '',
  'SYS_SELECT_WITH_SYS_TIME': 1,
  'TESTOPTS': '',
  'TESTPATH': '',
- 'TESTPYTHON': '_PYTHON_PROJECT_BASE=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static '
+ 'TESTPYTHON': '_PYTHON_PROJECT_BASE=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static '
                '_PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) '
                'PYTHONPATH=$(shell test -f pybuilddir.txt && echo '
-               '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static/`cat '
-               'pybuilddir.txt`:)/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Lib '
+               '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static/`cat '
+               'pybuilddir.txt`:)/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Lib '
                '_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__darwin_darwin '
-               '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python',
+               '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python',
  'TESTPYTHONOPTS': '',
- 'TESTRUNNER': '_PYTHON_PROJECT_BASE=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static '
+ 'TESTRUNNER': '_PYTHON_PROJECT_BASE=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static '
                '_PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) '
                'PYTHONPATH=$(shell test -f pybuilddir.txt && echo '
-               '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static/`cat '
-               'pybuilddir.txt`:)/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Lib '
+               '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static/`cat '
+               'pybuilddir.txt`:)/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Lib '
                '_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__darwin_darwin '
-               '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python '
-               '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Tools/scripts/run_tests.py',
+               '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python '
+               '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Tools/scripts/run_tests.py',
  'TESTSUBDIRS': 'idlelib/idle_test \\',
  'TESTTIMEOUT': 1200,
  'TEST_MODULES': 'yes',
  'THREAD_STACK_SIZE': '0x1000000',
  'TIMEMODULE_LIB': 0,
  'TM_IN_SYS_TIME': 0,
- 'TZPATH': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo:/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/tzinfo',
+ 'TZPATH': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo:/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/tzinfo',
  'UNICODE_DEPS': '\\',
  'UNIVERSALSDK': '',
- 'UPDATE_FILE': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Tools/build/update_file.py',
+ 'UPDATE_FILE': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Tools/build/update_file.py',
  'USE_COMPUTED_GOTOS': 1,
  'VERSION': '3.12',
- 'VPATH': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work',
- 'WASM_ASSETS_DIR': './Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env',
- 'WASM_STDLIB': './Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/os.py',
+ 'VPATH': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work',
+ 'WASM_ASSETS_DIR': './Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env',
+ 'WASM_STDLIB': './Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/python3.12/os.py',
  'WHEEL_PKG_DIR': '',
  'WINDOW_HAS_FLAGS': 0,
  'WITH_DECIMAL_CONTEXTVAR': 1,
@@ -1618,9 +1647,9 @@ build_time_vars = {'ABIFLAGS': '',
  'WITH_VALGRIND': 0,
  'X87_DOUBLE_ROUNDING': 0,
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
- 'abs_builddir': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static',
- 'abs_srcdir': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work',
- 'datarootdir': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share',
- 'exec_prefix': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env',
- 'prefix': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env',
- 'srcdir': '/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work'}
+ 'abs_builddir': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static',
+ 'abs_srcdir': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work',
+ 'datarootdir': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share',
+ 'exec_prefix': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env',
+ 'prefix': '/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env',
+ 'srcdir': '/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work'}

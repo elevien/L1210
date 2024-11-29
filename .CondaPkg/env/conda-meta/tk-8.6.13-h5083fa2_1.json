@@ -1260,7 +1260,7 @@
                 "_path": "lib/itcl4.2.3/itclConfig.sh",
                 "path_type": "hardlink",
                 "sha256": "47ded9c7c1dfabd5ec2c93a882d9797b022ffe39e09bfe9aa4a0f521c555609c",
-                "sha256_in_prefix": "19e3396790cb701b62600116495302ae8fdc0dc56d4832f4e4e9d1a7d9e6b2f0",
+                "sha256_in_prefix": "8c320860d477c3cf5a6b70fb6d095062d9a1b00ee1d617de6def7ea8c751b292",
                 "size_in_bytes": 4904
             },
             {
@@ -1302,7 +1302,7 @@
                 "_path": "lib/libtcl8.6.dylib",
                 "path_type": "hardlink",
                 "sha256": "e25c2e7965421e37c101bd5f9e188605efdef1bdc037ba83e689079ba7e5f8f9",
-                "sha256_in_prefix": "fa80f21abae1a5ced59358c3fe9851d21a2ad94c100bc7466d4a2d7ca30cfb78",
+                "sha256_in_prefix": "7a13c1253cda62abb43d1f1fb5a01eaa33fdc6e8f69c539378d0d52320d4f832",
                 "size_in_bytes": 1594624
             },
             {
@@ -1330,14 +1330,14 @@
                 "_path": "lib/pkgconfig/tcl.pc",
                 "path_type": "hardlink",
                 "sha256": "996d4b42bc3902e3cffc1d8ecb29709df4097beb5e49f409925a0806884efe8e",
-                "sha256_in_prefix": "2d2536e9cec7758ff7ff8e3ab108159e5ac9e66480efc571b128bad6a0364574",
+                "sha256_in_prefix": "37f7adad7d27b8ab1cb17ac39617f884c7bbf1822255e8b895c3b558912fb96f",
                 "size_in_bytes": 1221
             },
             {
                 "_path": "lib/pkgconfig/tk.pc",
                 "path_type": "hardlink",
                 "sha256": "3d0aa87c581cbdedff94a0ceff689e2e2065760743afa8ddcf5e9ec034d69235",
-                "sha256_in_prefix": "79bbd8c4b5c2ff8ceec9a793b878abf3254f7d85509f59e96e8762ac99a0a57a",
+                "sha256_in_prefix": "feba7b419047408ccd66050fbf94ae467bb9be1d741edae39944ea621a2c206d",
                 "size_in_bytes": 1175
             },
             {
@@ -2954,7 +2954,7 @@
                 "_path": "lib/tclConfig.sh",
                 "path_type": "hardlink",
                 "sha256": "6ff4cafd484739ef7b845ce4dbe70e3bfda65f86046a58df2eeaa02815be4bde",
-                "sha256_in_prefix": "085ea9e1d32db73ec5b92c9e38a0d99912b0f66f37e07ab42723a5f52d17007c",
+                "sha256_in_prefix": "6977931ecd86d9a05c3799ac6838e70bb0a7a0e5025d9c8ca4f3484041243a1b",
                 "size_in_bytes": 12392
             },
             {
@@ -2996,7 +2996,7 @@
                 "_path": "lib/tdbc1.1.5/tdbcConfig.sh",
                 "path_type": "hardlink",
                 "sha256": "4f33998f2332e04cff72792bf26c33819245bc873aba4c08038b0c76a0117ae1",
-                "sha256_in_prefix": "cd3c81dff6d64118cf3be565bcd25dc7934f994692f670979e40b555fa4034ee",
+                "sha256_in_prefix": "456e6df4988bd1471cde7292e1433b925ab1ef525906ce427f53e48d797111fa",
                 "size_in_bytes": 6409
             },
             {
@@ -4298,7 +4298,7 @@
                 "_path": "lib/tkConfig.sh",
                 "path_type": "hardlink",
                 "sha256": "3d167ae4934754d9509d753258050eab505d58829e58a5bc350140d368e7bddc",
-                "sha256_in_prefix": "5f5078ab3324e172d6ad7d7c45d5dc0b3f5327adbf6cfd43af418a0b29d23257",
+                "sha256_in_prefix": "93dec8bed8ad111763c2ad829ff5128a51248e80c1dc7164d272c37c88ece9a7",
                 "size_in_bytes": 6670
             }
         ],

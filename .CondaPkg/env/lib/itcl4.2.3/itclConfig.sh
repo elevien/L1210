@@ -26,8 +26,8 @@ ITCL_BUILD_LIB_SPEC='-L/Users/runner/miniforge3/conda-bld/tk_1699201850000/work/
 
 # String to pass to linker to pick up the Itcl library from its
 # installed directory.
-itcl_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litcl4.2.3'
-ITCL_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litcl4.2.3'
+itcl_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litcl4.2.3'
+ITCL_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litcl4.2.3'
 
 # The name of the Itcl stub library (a .a file):
 itcl_STUB_LIB_FILE=libitclstub4.2.3.a
@@ -40,8 +40,8 @@ ITCL_BUILD_STUB_LIB_SPEC='-L/Users/runner/miniforge3/conda-bld/tk_1699201850000/
 
 # String to pass to linker to pick up the Itcl stub library from its
 # installed directory.
-itcl_STUB_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litclstub4.2.3'
-ITCL_STUB_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litclstub4.2.3'
+itcl_STUB_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litclstub4.2.3'
+ITCL_STUB_LIB_SPEC='-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3 -litclstub4.2.3'
 
 # String to pass to linker to pick up the Itcl stub library from its
 # build directory.
@@ -50,8 +50,8 @@ ITCL_BUILD_STUB_LIB_PATH='/Users/runner/miniforge3/conda-bld/tk_1699201850000/wo
 
 # String to pass to linker to pick up the Itcl stub library from its
 # installed directory.
-itcl_STUB_LIB_PATH='/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3/libitclstub4.2.3.a'
-ITCL_STUB_LIB_PATH='/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3/libitclstub4.2.3.a'
+itcl_STUB_LIB_PATH='/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3/libitclstub4.2.3.a'
+ITCL_STUB_LIB_PATH='/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/itcl4.2.3/libitclstub4.2.3.a'
 
 # Location of the top-level source directories from which [incr Tcl]
 # was built.  This is the directory that contains generic, unix, etc.

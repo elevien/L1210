@@ -55,12 +55,12 @@
             {
                 "_path": "lib/libgomp.1.dylib",
                 "path_type": "softlink",
-                "sha256_in_prefix": "9f31a40bd1e358cd447aa5adb2e480fdcf5278e58189123480cf6f9a07d85e40"
+                "sha256_in_prefix": "aa38f8ac629e4bc54ec427bce26eba4d05785059b558ecf71746321bb513c912"
             },
             {
                 "_path": "lib/libgomp.dylib",
                 "path_type": "softlink",
-                "sha256_in_prefix": "9f31a40bd1e358cd447aa5adb2e480fdcf5278e58189123480cf6f9a07d85e40"
+                "sha256_in_prefix": "aa38f8ac629e4bc54ec427bce26eba4d05785059b558ecf71746321bb513c912"
             },
             {
                 "_path": "lib/libquadmath.0.dylib",

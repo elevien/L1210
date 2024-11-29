@@ -156,14 +156,14 @@
                 "_path": "lib/cmake/libjpeg-turbo/libjpeg-turboTargets-release.cmake",
                 "path_type": "hardlink",
                 "sha256": "8782e2bbf574ba0c8047485d2f5d2a33b1f11d328a401ea78da9757e1b1e4952",
-                "sha256_in_prefix": "65b5d7d2adc8f47091203c856510bae09945db3fa8b0a487e8709ff04dd6cf1f",
+                "sha256_in_prefix": "d7fcf62ce02c82178d71e81176a212704694aa2eaabd79975232a6f270566d89",
                 "size_in_bytes": 4409
             },
             {
                 "_path": "lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake",
                 "path_type": "hardlink",
                 "sha256": "21ccb2bf2932195a2ecefef9462fcc70319a6a183691d8f6b1995bc5c68989a0",
-                "sha256_in_prefix": "1593e5d9cccf6a428a6f3d7b160de317c8572a1695d97dc82c63b6cd2876aadd",
+                "sha256_in_prefix": "8cb406b391cd78a3e180b06c99520d5371c4fca04ef42f1edd4fc5c1d0fdae62",
                 "size_in_bytes": 4659
             },
             {
@@ -222,14 +222,14 @@
                 "_path": "lib/pkgconfig/libjpeg.pc",
                 "path_type": "hardlink",
                 "sha256": "8427cc38c3f096481182342a8b0a1044ee2579ac7c693f3908e63171ffa3a3d6",
-                "sha256_in_prefix": "a29d8734a23947b0ba71587d0bb889574d595449ff00a33426b9e1973083b5d1",
+                "sha256_in_prefix": "4755954f2d8736192d8999f5cc0e8265751b5bcb9d2b939b1426d9339f2e7096",
                 "size_in_bytes": 1225
             },
             {
                 "_path": "lib/pkgconfig/libturbojpeg.pc",
                 "path_type": "hardlink",
                 "sha256": "2709d0f68358ddabd29495262dc750bd61c00585d8a08b590cc6789044a14e9e",
-                "sha256_in_prefix": "7a96133185a1ded33664bc54aa7884575596c24f4b09c12d7352d48d8a9f0028",
+                "sha256_in_prefix": "e0aff12203550c09e764f2b7dcfd587715d1b967bd2d43df3e21010eac37dd89",
                 "size_in_bytes": 1237
             },
             {

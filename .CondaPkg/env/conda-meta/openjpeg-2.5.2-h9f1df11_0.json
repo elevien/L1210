@@ -132,7 +132,7 @@
                 "_path": "lib/pkgconfig/libopenjp2.pc",
                 "path_type": "hardlink",
                 "sha256": "5ec3acd4a48fe88877770fdd286be31d63c3a689c4a21a2e1f73e51edec6f428",
-                "sha256_in_prefix": "1cbc1fcd79ed1472d5d3bbdfebf6adf1184e31ff8f6d5f691ced836d5b1c438a",
+                "sha256_in_prefix": "669af368043dc2810bfbd67aee210de62e6b86efea32a0bfc2713568c710a9c5",
                 "size_in_bytes": 614
             }
         ],

@@ -47,7 +47,7 @@ unset(_cmake_expected_targets)
 
 
 # The installation prefix configured by this project.
-set(_IMPORT_PREFIX "/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env")
+set(_IMPORT_PREFIX "/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env")
 
 # Create imported target libjpeg-turbo::jpeg
 add_library(libjpeg-turbo::jpeg SHARED IMPORTED)

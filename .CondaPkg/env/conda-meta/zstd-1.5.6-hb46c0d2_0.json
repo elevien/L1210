@@ -156,7 +156,7 @@
                 "_path": "lib/pkgconfig/libzstd.pc",
                 "path_type": "hardlink",
                 "sha256": "2d6d8e7647430c136b688382a5be1989a18b04e5791381ebe7c32eb25cefe897",
-                "sha256_in_prefix": "b54308896cddd9444a1aed7914b2eedce23c6a4db85a26e12450200fdf20f601",
+                "sha256_in_prefix": "a21d8511b78092b4e1dd2eed4382ff769a9b73ffccdb9a18e84398fac8b463da",
                 "size_in_bytes": 699
             },
             {

@@ -105,7 +105,7 @@
                 "_path": "lib/pkgconfig/lcms2.pc",
                 "path_type": "hardlink",
                 "sha256": "c7e5abc30473a695d0b8e47af4adfde96c6897eabe8079cbc71734dd8941b3ba",
-                "sha256_in_prefix": "691e80e5e9a084bdf4498889ac277ce12eb0eb8e1075c1a4020ab93af47769f6",
+                "sha256_in_prefix": "a867f907028fab3ee7df2125eeb39b1cee184f636ae717901cbc0e27485e43d1",
                 "size_in_bytes": 489
             },
             {

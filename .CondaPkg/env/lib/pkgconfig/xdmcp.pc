@@ -1,11 +1,11 @@
-prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
+prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: Xdmcp
 Description: X Display Manager Control Protocol library
-Version: 1.1.3
+Version: 1.1.5
 Requires: xproto
 Cflags: -I${includedir}
 Libs: -L${libdir} -lXdmcp

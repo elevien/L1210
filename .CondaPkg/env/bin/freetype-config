@@ -35,17 +35,17 @@ if test $? -eq 0 ; then
   dynamic_libs=` --libs freetype2`
   static_libs=` --static --libs freetype2`
 else
-  prefix="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env"
-  exec_prefix="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env"
+  prefix="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env"
+  exec_prefix="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env"
 
-  includedir="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include"
-  libdir="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib"
+  includedir="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include"
+  libdir="/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib"
 
   version=24.3.18
 
   cflags="-I${SYSROOT}$includedir/freetype2"
   dynamic_libs="-lfreetype"
-  static_libs="-lfreetype -lz -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lpng16 -lz"
+  static_libs="-lfreetype -lz -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lpng16 -lz"
   if test "${SYSROOT}$libdir" != "/usr/lib"   &&
      test "${SYSROOT}$libdir" != "/usr/lib64" ; then
     libs_L="-L${SYSROOT}$libdir"

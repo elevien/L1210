@@ -89,7 +89,7 @@
                 "_path": "bin/freetype-config",
                 "path_type": "hardlink",
                 "sha256": "9a8fd5e62fdea99e596819910ec85165cd0771babbc40cd16ac97b9b8b461eb3",
-                "sha256_in_prefix": "117c44156442c981298e8c188d236faa0e99376de3f40b4c58ca958884fbaa92",
+                "sha256_in_prefix": "37ed8c671af00785c751df2ae171c64faaeee6e68cb931dca33fddf01a970e5b",
                 "size_in_bytes": 6246
             },
             {
@@ -501,7 +501,7 @@
                 "_path": "lib/pkgconfig/freetype2.pc",
                 "path_type": "hardlink",
                 "sha256": "e442d8949578df2ac9c8c09f2b2ce651860c82b2d5016f162f5c9a82b64174d0",
-                "sha256_in_prefix": "2b3070ee3d7ddc6da42a064ae868549a8f65b971a0cf968ef82ea81f93039587",
+                "sha256_in_prefix": "5538bfc2c6cca936a871b7f3c9721322ca37aa631b837f44ec316dac607f3ee4",
                 "size_in_bytes": 1830
             },
             {

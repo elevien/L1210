@@ -1,4 +1,4 @@
-/* Generated automatically from /Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/Modules/config.c.in by makesetup. */
+/* Generated automatically from /Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/Modules/config.c.in by makesetup. */
 /* -*- C -*- ***********************************************
 Copyright (c) 2000, BeOpen.com.
 Copyright (c) 1995-2000, Corporation for National Research Initiatives.

@@ -1,4 +1,4 @@
-#!/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/bin/python3.12
+#!/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/bin/python3.12
 # -*- python -*-
 
 # Keep this script in sync with python-config.sh.in

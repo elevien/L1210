@@ -1,4 +1,7 @@
 # --------------------------------------------------------------------
+# This file fites the each lineage to the OU and division noise models based on the variance in time averaged growth rates
+
+
 # setup and get data and gp output 
 data = CSV.read("./../output/data_processed.csv",DataFrames.DataFrame);
 

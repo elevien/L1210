@@ -209,35 +209,35 @@
                 "_path": "lib/pkgconfig/libsharpyuv.pc",
                 "path_type": "hardlink",
                 "sha256": "d90a8c020adac0d2f3c5fbf8fa394344f810233abee68319c6a83786d051b856",
-                "sha256_in_prefix": "8d7c68223d1a011e1930279a2be4256824f7881ad17289e3ad9bdefe6e3a1cc9",
+                "sha256_in_prefix": "cddcaf9538ecf3a60e6b48ec2c81519efe983b64f76a97e7f4c09c922856d4c4",
                 "size_in_bytes": 502
             },
             {
                 "_path": "lib/pkgconfig/libwebp.pc",
                 "path_type": "hardlink",
                 "sha256": "69eefdfa45717461bd4853c85c9e133da7c60fc93987117176d1bf8ba5001a26",
-                "sha256_in_prefix": "a2aac2ae0e53c3dd5592d250f5cf4090e7b51cb538b5e4752c9f234358c7b0b0",
+                "sha256_in_prefix": "f02962810804cae021688414995baf245e1d43ec82e3afd80d95ac05bc239340",
                 "size_in_bytes": 516
             },
             {
                 "_path": "lib/pkgconfig/libwebpdecoder.pc",
                 "path_type": "hardlink",
                 "sha256": "0011c0fd789573b4e2bc70fdf494cc214e09cfecf4907f140b199b117ae7e754",
-                "sha256_in_prefix": "77dc7dc3afafe87cb2c1f0998020d99146ee5d13493ec0ce96012d30e7f83c41",
+                "sha256_in_prefix": "24045e7fa400c50e50153850e245a9f8e1c2f0201ac445429c54ea879fc93cee",
                 "size_in_bytes": 514
             },
             {
                 "_path": "lib/pkgconfig/libwebpdemux.pc",
                 "path_type": "hardlink",
                 "sha256": "ad0ca7b7a9dfd2787ea6fa2ff354802131a0646ec9fbb0000a0ff31017aed602",
-                "sha256_in_prefix": "8359c0d0bab137c40c518757247dac2f61c8a2ebd02c5455845bce23265409c2",
+                "sha256_in_prefix": "8ee33779a2abcc4da8c2178c4c9958c4dd1e09a85394d215dcec02f7fd63a9df",
                 "size_in_bytes": 532
             },
             {
                 "_path": "lib/pkgconfig/libwebpmux.pc",
                 "path_type": "hardlink",
                 "sha256": "69054a5aa8b35b87ac08168ed4fc22bb668db4f5d2da66bef4ac3bd0c77c692f",
-                "sha256_in_prefix": "12c0075c164d3e915fafca65bd419a98302ee9127d2481a4e28e34d24ad64798",
+                "sha256_in_prefix": "24538c3e37d79a1c8b08d93a679fba811dafbb890f1f462cb525b1f6da1ee507",
                 "size_in_bytes": 548
             },
             {

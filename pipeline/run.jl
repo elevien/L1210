@@ -37,13 +37,13 @@ alert("Finished fig4 simulations")
 
 # # ----------------------------------------------------------------------------------------
 # # run GP on simulated data
-sim_source = "./../output/sims_OUfit.csv"
-sim_data = CSV.read(sim_source,DataFrames.DataFrame);
-sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
-sim_data = sim_data[sim_data.replicate .==1,:] # only run 1 replicate through the GP
-model = GrowthTraceTools.Matern32NoTrendModel()
-gp_pipeline(sim_data,"./../output/gp/sims",model)
-alert("Finished running GP on fig 4 data")
+# sim_source = "./../output/sims_OUfit.csv"
+# sim_data = CSV.read(sim_source,DataFrames.DataFrame);
+# sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
+# sim_data = sim_data[sim_data.replicate .==1,:] # only run 1 replicate through the GP
+# model = GrowthTraceTools.Matern32NoTrendModel()
+# gp_pipeline(sim_data,"./../output/gp/sims",model)
+# alert("Finished running GP on fig 4 data")
 
 # ########################################################################################
 # FIG 5
@@ -51,17 +51,17 @@ alert("Finished running GP on fig 4 data")
 
 # ----------------------------------------------------------------------------------------
 # generate simulations
-# include("./fig5_sims.jl")
-# alert("**** Finished fig5 simulations ****")
+include("./fig5_sims.jl")
+alert("**** Finished fig5 simulations ****")
 
-# # ----------------------------------------------------------------------------------------
-# # run GP on one replicate of sims
-# sim_source = "./../output/sims_models.csv"
-# sim_data = CSV.read(sim_source,DataFrames.DataFrame);
-# sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
-# sim_data = sim_data[sim_data.replicate .==1,:] # only run 1 replicate through the GP
-# model = GrowthTraceTools.Matern32NoTrendModel()
-# gp_pipeline(sim_data,"./../output/gp/sims_fig5",model)
-# alert("**** Finished running GP on fig 5 sims ****")
+# ----------------------------------------------------------------------------------------
+# run GP on one replicate of sims
+sim_source = "./../output/sims_models.csv"
+sim_data = CSV.read(sim_source,DataFrames.DataFrame);
+sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
+sim_data = sim_data[sim_data.replicate .==1,:] # only run 1 replicate through the GP
+model = GrowthTraceTools.Matern32NoTrendModel()
+gp_pipeline(sim_data,"./../output/gp/sims_fig5",model)
+alert("**** Finished running GP on fig 5 sims ****")
 
 

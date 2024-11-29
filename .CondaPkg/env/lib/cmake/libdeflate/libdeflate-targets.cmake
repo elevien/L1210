@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.27)
+cmake_policy(VERSION 2.8.3...3.28)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -60,7 +60,7 @@ add_library(libdeflate::libdeflate_shared SHARED IMPORTED)
 
 set_target_properties(libdeflate::libdeflate_shared PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "LIBDEFLATE_DLL"
-  INTERFACE_INCLUDE_DIRECTORIES "/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include"
 )
 
 # Load information for each installed configuration.

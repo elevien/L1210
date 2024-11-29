@@ -29,16 +29,16 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 
 # === Variables set by configure
 VERSION=	3.12
-srcdir=		/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work
-VPATH=		/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work
-abs_srcdir=	/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work
-abs_builddir=	/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-static
+srcdir=		/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work
+VPATH=		/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work
+abs_srcdir=	/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work
+abs_builddir=	/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-static
 
 
 CC=		arm64-apple-darwin20.0.0-clang
 CXX=		arm64-apple-darwin20.0.0-clang++
 LINKCC=		$(PURIFY) $(CC)
-AR=		/Users/runner/miniforge3/conda-bld/python-split_1718618245843/_build_env/bin/arm64-apple-darwin20.0.0-llvm-ar
+AR=		/Users/runner/miniforge3/conda-bld/python-split_1728056551585/_build_env/bin/arm64-apple-darwin20.0.0-llvm-ar
 SOABI=		cpython-312-darwin
 LDVERSION=	$(VERSION)$(ABIFLAGS)
 LIBPYTHON=	
@@ -47,7 +47,7 @@ GITTAG=
 GITBRANCH=	
 PGO_PROF_GEN_FLAG=-fprofile-instr-generate
 PGO_PROF_USE_FLAG=-fprofile-instr-use="$(shell pwd)/code.profclangd"
-LLVM_PROF_MERGER= /Users/runner/miniforge3/conda-bld/python-split_1718618245843/_build_env/bin/llvm-profdata merge -output="$(shell pwd)/code.profclangd" "$(shell pwd)"/*.profclangr 
+LLVM_PROF_MERGER= /Users/runner/miniforge3/conda-bld/python-split_1728056551585/_build_env/bin/llvm-profdata merge -output="$(shell pwd)/code.profclangd" "$(shell pwd)"/*.profclangr 
 LLVM_PROF_FILE=LLVM_PROFILE_FILE="$(shell pwd)/code-%p.profclangr"
 LLVM_PROF_ERR=no
 DTRACE=         
@@ -74,19 +74,19 @@ INSTALL_DATA=	${INSTALL} -m 644
 # rather than figuring out exactly which, we always give them executable mode.
 INSTALL_SHARED= ${INSTALL} -m 755
 
-MKDIR_P=	/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/install-sh -c -d
+MKDIR_P=	/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/install-sh -c -d
 
 MAKESETUP=      $(srcdir)/Modules/makesetup
 
 # Compiler options
 OPT=		-DNDEBUG -O2 -Wall
-BASECFLAGS=	 -fno-strict-overflow
+BASECFLAGS=	 -fno-strict-overflow -Wsign-compare -Wunreachable-code
 BASECPPFLAGS=	-IObjects -IInclude -IPython
-CONFIGURE_CFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work=/usr/local/src/conda/python-3.12.4 -fdebug-prefix-map=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env=/usr/local/src/conda-prefix -arch arm64 
+CONFIGURE_CFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work=/usr/local/src/conda/python-3.12.7 -fdebug-prefix-map=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env=/usr/local/src/conda-prefix -arch arm64 
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
-CONFIGURE_CFLAGS_NODIST= =full -std=c11 -Werror=implicit-function-declaration -fvisibility=hidden
+CONFIGURE_CFLAGS_NODIST= =full -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden
 # LDFLAGS_NODIST is used in the same manner as CFLAGS_NODIST.
 # Use it when a linker flag should _not_ be part of the distutils LDFLAGS
 # once Python is installed (bpo-35257)
@@ -94,8 +94,8 @@ CONFIGURE_LDFLAGS_NODIST= =full -Wl,-export_dynamic -Wl,-object_path_lto,"$@".lt
 # LDFLAGS_NOLTO is an extra flag to disable lto. It is used to speed up building
 # of _bootstrap_python and _freeze_module tools, which don't need LTO.
 CONFIGURE_LDFLAGS_NOLTO==thin
-CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-CONFIGURE_LDFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib
+CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+CONFIGURE_LDFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
 # values.
@@ -134,7 +134,7 @@ MULTIARCH=	darwin
 MULTIARCH_CPPFLAGS = -DMULTIARCH=\"darwin\"
 
 # Install prefix for architecture-independent files
-prefix=		/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
+prefix=		/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -167,7 +167,7 @@ SHLIB_SUFFIX=	.so
 EXT_SUFFIX=	.cpython-312-darwin.so
 LDSHARED=	$(CC) -bundle -undefined dynamic_lookup $(PY_LDFLAGS)
 BLDSHARED=	$(CC) -bundle -undefined dynamic_lookup $(PY_CORE_LDFLAGS)
-LDCXXSHARED=	$(CXX) -bundle -undefined dynamic_lookup
+LDCXXSHARED=	$(CXX) -bundle -undefined dynamic_lookup $(PY_LDFLAGS)
 DESTSHARED=	$(BINLIBDEST)/lib-dynload
 
 # List of exported symbols for AIX
@@ -298,15 +298,15 @@ MODULE__CRYPT_STATE=yes
 MODULE__CRYPT_CFLAGS=
 MODULE__CRYPT_LDFLAGS=
 MODULE__CTYPES_STATE=yes
-MODULE__CTYPES_CFLAGS=-fno-strict-overflow -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -DUSING_APPLE_OS_LIBFFI=0 -DUSING_MALLOC_CLOSURE_DOT_C=1
+MODULE__CTYPES_CFLAGS=-fno-strict-overflow -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -DUSING_APPLE_OS_LIBFFI=0 -DUSING_MALLOC_CLOSURE_DOT_C=1
 MODULE__CTYPES_LDFLAGS=-lffi -ldl
 MODULE__CURSES_STATE=yes
-MODULE__CURSES_CFLAGS=-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -D_XOPEN_SOURCE_EXTENDED=1
-MODULE__CURSES_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-search_paths_first -lncursesw -ltinfow
+MODULE__CURSES_CFLAGS=-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -D_XOPEN_SOURCE_EXTENDED=1
+MODULE__CURSES_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-search_paths_first -lncursesw -ltinfow
 
 MODULE__CURSES_PANEL_STATE=yes
-MODULE__CURSES_PANEL_CFLAGS=-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -D_XOPEN_SOURCE_EXTENDED=1
-MODULE__CURSES_PANEL_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-search_paths_first -lpanelw -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-search_paths_first -lncursesw -ltinfow
+MODULE__CURSES_PANEL_CFLAGS=-D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -D_DARWIN_C_SOURCE -DNCURSES_WIDECHAR -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncursesw -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -D_XOPEN_SOURCE_EXTENDED=1
+MODULE__CURSES_PANEL_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-search_paths_first -lpanelw -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -Wl,-search_paths_first -lncursesw -ltinfow
 
 MODULE__DECIMAL_STATE=yes
 MODULE__DECIMAL_CFLAGS=-I$(srcdir)/Modules/_decimal/libmpdec -DUNIVERSAL=1
@@ -319,35 +319,35 @@ MODULE_NIS_STATE=yes
 MODULE_NIS_CFLAGS=
 MODULE_NIS_LDFLAGS=
 MODULE_READLINE_STATE=yes
-MODULE_READLINE_CFLAGS=-D_DARWIN_C_SOURCE -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncurses -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-MODULE_READLINE_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lreadline
+MODULE_READLINE_CFLAGS=-D_DARWIN_C_SOURCE -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include/ncurses -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+MODULE_READLINE_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lreadline
 MODULE__SQLITE3_STATE=yes
-MODULE__SQLITE3_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -I$(srcdir)/Modules/_sqlite
-MODULE__SQLITE3_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lsqlite3
+MODULE__SQLITE3_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -I$(srcdir)/Modules/_sqlite
+MODULE__SQLITE3_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lsqlite3
 MODULE__TKINTER_STATE=yes
-MODULE__TKINTER_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -Wno-strict-prototypes -DWITH_APPINIT=1
-MODULE__TKINTER_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6
+MODULE__TKINTER_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -Wno-strict-prototypes -DWITH_APPINIT=1
+MODULE__TKINTER_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -ltk8.6 -ltkstub8.6 -ltcl8.6 -ltclstub8.6
 MODULE__UUID_STATE=yes
 MODULE__UUID_CFLAGS=
 MODULE__UUID_LDFLAGS=
 MODULE_ZLIB_STATE=yes
-MODULE_ZLIB_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-MODULE_ZLIB_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lz
+MODULE_ZLIB_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+MODULE_ZLIB_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lz
 MODULE_BINASCII_STATE=yes
-MODULE_BINASCII_CFLAGS=-DUSE_ZLIB_CRC32 -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-MODULE_BINASCII_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lz
+MODULE_BINASCII_CFLAGS=-DUSE_ZLIB_CRC32 -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+MODULE_BINASCII_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -lz
 MODULE__BZ2_STATE=yes
 MODULE__BZ2_CFLAGS=
 MODULE__BZ2_LDFLAGS=-lbz2
 MODULE__LZMA_STATE=yes
-MODULE__LZMA_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-MODULE__LZMA_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -llzma
+MODULE__LZMA_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+MODULE__LZMA_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -llzma
 MODULE__SSL_STATE=yes
-MODULE__SSL_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-MODULE__SSL_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib  -lssl -lcrypto
+MODULE__SSL_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+MODULE__SSL_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib  -lssl -lcrypto
 MODULE__HASHLIB_STATE=yes
-MODULE__HASHLIB_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
-MODULE__HASHLIB_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib   -lcrypto
+MODULE__HASHLIB_CFLAGS=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include
+MODULE__HASHLIB_LDFLAGS=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib   -lcrypto
 MODULE__TESTCAPI_STATE=yes
 MODULE__TESTCLINIC_STATE=yes
 MODULE__TESTINTERNALCAPI_STATE=yes
@@ -363,7 +363,7 @@ MODULE_XXLIMITED_35_STATE=yes
 
 
 # Default zoneinfo.TZPATH. Added here to expose it in sysconfig.get_config_var
-TZPATH=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo
+TZPATH=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -372,7 +372,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--with-build-python=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python' '--prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env' '--build=x86_64-apple-darwin13.4.0' '--host=arm64-apple-darwin20.0.0' '--enable-ipv6' '--with-ensurepip=no' '--with-tzpath=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo' '--with-computed-gotos' '--with-system-expat' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include' '--with-tcltk-libs=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto=full' '-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include' '--disable-shared' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=arm64-apple-darwin20.0.0' 'PKG_CONFIG_PATH=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/pkgconfig' 'MACHDEP=darwin' 'CC=arm64-apple-darwin20.0.0-clang' 'CFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work=/usr/local/src/conda/python-3.12.4 -fdebug-prefix-map=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env=/usr/local/src/conda-prefix -arch arm64 ' 'LDFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib' 'CPPFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include'
+CONFIG_ARGS=	 '--with-build-python=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python' '--prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env' '--build=x86_64-apple-darwin13.4.0' '--host=arm64-apple-darwin20.0.0' '--enable-ipv6' '--with-ensurepip=no' '--with-tzpath=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/share/zoneinfo' '--with-computed-gotos' '--with-system-expat' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include' '--with-tcltk-libs=-L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -ltcl8.6 -ltk8.6' '--with-platlibdir=lib' '--with-lto=full' '-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include' '--disable-shared' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=arm64-apple-darwin20.0.0' 'PKG_CONFIG_PATH=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib/pkgconfig' 'MACHDEP=darwin' 'CC=arm64-apple-darwin20.0.0-clang' 'CFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work=/usr/local/src/conda/python-3.12.7 -fdebug-prefix-map=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env=/usr/local/src/conda-prefix -arch arm64 ' 'LDFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib -L/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/lib' 'CPPFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env/include'
 
 
 # Subdirectories with code
@@ -422,9 +422,9 @@ BUILDPYTHON=	python$(BUILDEXE)
 
 HOSTRUNNER= 
 
-PYTHON_FOR_REGEN?=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python
+PYTHON_FOR_REGEN?=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python
 UPDATE_FILE=$(PYTHON_FOR_REGEN) $(srcdir)/Tools/build/update_file.py
-PYTHON_FOR_BUILD=_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) /Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python
+PYTHON_FOR_BUILD=_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) /Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python
 # Single-platform builds depend on $(BUILDPYTHON). Cross builds use an
 # external "build Python" and have an empty PYTHON_FOR_BUILD_DEPS.
 PYTHON_FOR_BUILD_DEPS=
@@ -432,7 +432,7 @@ PYTHON_FOR_BUILD_DEPS=
 # Single-platform builds use Programs/_freeze_module.c for bootstrapping and
 # ./_bootstrap_python Programs/_freeze_module.py for remaining modules
 # Cross builds use an external "build Python" for all modules.
-PYTHON_FOR_FREEZE=/Users/runner/miniforge3/conda-bld/python-split_1718618245843/work/build-python-install/bin/python
+PYTHON_FOR_FREEZE=/Users/runner/miniforge3/conda-bld/python-split_1728056551585/work/build-python-install/bin/python
 FREEZE_MODULE_BOOTSTRAP=$(PYTHON_FOR_FREEZE) $(srcdir)/Programs/_freeze_module.py
 FREEZE_MODULE_BOOTSTRAP_DEPS=$(srcdir)/Programs/_freeze_module.py
 FREEZE_MODULE=$(FREEZE_MODULE_BOOTSTRAP)
@@ -2273,6 +2273,7 @@ LIBSUBDIRS=	asyncio \
 		__phello__
 TESTSUBDIRS=	idlelib/idle_test \
 		test \
+		test/test_ast \
 		test/audiodata \
 		test/certdata \
 		test/certdata/capath \

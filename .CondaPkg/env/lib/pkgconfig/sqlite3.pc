@@ -1,13 +1,13 @@
 # Package Information for pkg-config
 
-prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
+prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: SQLite
 Description: SQL database engine
-Version: 3.46.0
+Version: 3.47.0
 Libs: -L${libdir} -lsqlite3
 Libs.private: -lz 
 Cflags: -I${includedir}

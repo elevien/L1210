@@ -1,11 +1,11 @@
-prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE_PAPERS/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
+prefix=/Users/elevien/Dartmouth College Dropbox/Ethan Levien/RESEARCH/ACTIVE/L1210_growth_rate_fluctuations/L1210/.CondaPkg/env
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
 
 Name: libdeflate
 Description: Fast implementation of DEFLATE, zlib, and gzip
-Version: 1.20
+Version: 1.22
 Libs: -L${libdir} -ldeflate
 Cflags: -I${includedir}
 
