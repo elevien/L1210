@@ -15,10 +15,6 @@ function solver_output_to_dataframe(sol,names)
     df = DataFrame(u,names)
     df[:,"time"] = sol.t;
 
-    # get positions 
-    # NOTE: previously I had recorded positions while solving, but ran into issues with this
-
-    
     get_positions!(df,1)
     positions = unique(df.position)
     df[:,:age] = vcat([df[df.position .==p,:time] .- df[df.position .==p,:time][1] for p in positions]...)
