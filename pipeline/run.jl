@@ -25,14 +25,14 @@ include("./gp_pipeline.jl")
 # gp_pipeline(data,"./../output/gp/data",model)
 # alert("Finished running GP on data")
 
-include("./fitting.jl")
-alert("Finished fitting GP params")
+#include("./fitting.jl")
+#alert("Finished fitting GP params")
 
 
 # # ----------------------------------------------------------------------------------------
 # # generate simulations
-include("./fig4_sims.jl")
-alert("Finished fig4 simulations")
+#include("./fig4_sims.jl")
+#alert("Finished fig4 simulations")
 
 
 # # ----------------------------------------------------------------------------------------
@@ -51,15 +51,15 @@ alert("Finished fig4 simulations")
 
 # ----------------------------------------------------------------------------------------
 # generate simulations
-include("./fig5_sims.jl")
-alert("**** Finished fig5 simulations ****")
+#include("./fig5_sims.jl")
+#alert("**** Finished fig5 simulations ****")
 
 # ----------------------------------------------------------------------------------------
 # run GP on one replicate of sims
 sim_source = "./../output/sims_models.csv"
 sim_data = CSV.read(sim_source,DataFrames.DataFrame);
 sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
-sim_data = sim_data[sim_data.replicate .==1,:] # only run 1 replicate through the GP
+sim_data = sim_data[sim_data.replicate .== 1,:] # only run 1 replicate through the GP
 model = GrowthTraceTools.Matern32NoTrendModel()
 gp_pipeline(sim_data,"./../output/gp/sims_fig5",model)
 alert("**** Finished running GP on fig 5 sims ****")

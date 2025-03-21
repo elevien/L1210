@@ -1,4 +1,3 @@
-
 function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
     # 1: LOAD PROCESSED DATA -----------------------------------------------------------------------------------------------
     #data_src = "/Users/elevien/Dropbox (Dartmouth College)/RESEARCH/L1210_growth_rate_fluctuations/experimental_data/processed_data/traceupdated.csv"
@@ -12,8 +11,28 @@ function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
         - age_normed (the normalized age of each cell)
     """
 
+    println("Type of data: ", typeof(data))
+    println("Is data empty? ", isempty(data))
+    println("Number of rows: ", size(data, 1))
+    println("Number of columns: ", size(data, 2))
+    println("Columns in data: ", names(data))
+    
+    # Check if data is valid
+    if size(data, 2) == 0
+        error("Input DataFrame has no columns")
+    end
+    
+    if !("lineage" in names(data))
+        error("No 'lineage' column found in data. Available columns are: ", join(names(data), ", "))
+    end
 
+    println("First few rows of data:")
+    println(first(data, 3))
+
+    data[!, :lineage] = Int.(data[!, :lineage])  # Convert lineage to integers
     lineages = unique(data.lineage)
+    println("Unique lineages: ", lineages)
+    println("Type of lineage column: ", eltype(data.lineage))
 
 
     # # 2: GAUSSIAN PROCESSES  -----------------------------------------------------------------------------------------------
@@ -60,7 +79,7 @@ function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
             println(" *** Skipping lineage")
         end
     end
-    pred_df = vcat(pred_dfs...)
+    pred_df = DataFrame(vcat(pred_dfs...))
     param_df = vcat(param_dfs...)
 
     pred_df[:,:age] = vcat([d.time .- d.time[1] for d in groupby(pred_df,[:lineage,:position])]...);
