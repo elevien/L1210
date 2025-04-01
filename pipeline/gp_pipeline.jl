@@ -1,4 +1,4 @@
-function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
+function gp_pipeline(data,out_file,model,dt_prediction = 0.1)
     # 1: LOAD PROCESSED DATA -----------------------------------------------------------------------------------------------
     #data_src = "/Users/elevien/Dropbox (Dartmouth College)/RESEARCH/L1210_growth_rate_fluctuations/experimental_data/processed_data/traceupdated.csv"
     """
@@ -84,9 +84,9 @@ function gp_pipeline(data,out_dir,model,dt_prediction = 0.1)
 
     pred_df[:,:age] = vcat([d.time .- d.time[1] for d in groupby(pred_df,[:lineage,:position])]...);
 
-    mkpath(out_dir)
-    CSV.write(out_dir*"/preds.csv",pred_df)
-    CSV.write(out_dir*"/params.csv",param_df)
+    mkpath(out_file)
+    CSV.write(out_file*"_gp_preds.csv",pred_df)
+    CSV.write(out_file*"_gp_params.csv",param_df)
 end
 
 
