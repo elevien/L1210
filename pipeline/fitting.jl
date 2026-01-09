@@ -6,7 +6,7 @@
 data = CSV.read("./../output/data_processed.csv",DataFrames.DataFrame);
 
 # get GP output for fitting 
-data_gp = CSV.read("./../output/data_gp_preds.csv",DataFrame);
+data_gp = CSV.read("./../output/gp/data/preds.csv",DataFrame);
 data = data[data.length .>=9,:]
 lineages = unique(data.lineage);
 

@@ -6,8 +6,6 @@
 struct Matern32Model <: GrowthTraceTools.GpDecomp end
 struct Matern32NoTrendModel <: GrowthTraceTools.GpDecomp end
 
-
-
 ########################################################################################
 # some useful kernel functions
 ########################################################################################
