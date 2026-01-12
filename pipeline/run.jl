@@ -24,22 +24,22 @@ include("./preprocess.jl")
 # ########################################################################################
 # # ----------------------------------------------------------------------------------------
 # run GP on raw data
-data_source = "./../output/data_processed.csv"
-data = CSV.read(data_source,DataFrames.DataFrame);
-println(unique(data.length))
-data = data[(data.length .>= 5),:];
-model = GrowthTraceTools.Matern32Model()
-pred_df, param_df = gp_pipeline(data,model)
-alert("Finished running GP on data")
+# data_source = "./../output/data_processed.csv"
+# data = CSV.read(data_source,DataFrames.DataFrame);
+# println(unique(data.length))
+# data = data[(data.length .>= 5),:];
+# model = GrowthTraceTools.Matern32Model()
+# pred_df, param_df = gp_pipeline(data,model)
+# alert("Finished running GP on data")
 
-# save to output/gp/data/preds.csv and output/gp/data/params.csv
-# make folder if they don't exist 
-ispath("./../output/gp/") || mkdir("./../output/gp/")
-ispath("./../output/gp/data/") || mkdir("./../output/gp/data/")
-# save files
-CSV.write("./../output/gp/data/preds.csv",pred_df)
-CSV.write("./../output/gp/data/params.csv",param_df)
-alert("Saved GP outputs to ./../output/gp/data/")
+# # save to output/gp/data/preds.csv and output/gp/data/params.csv
+# # make folder if they don't exist 
+# ispath("./../output/gp/") || mkdir("./../output/gp/")
+# ispath("./../output/gp/data/") || mkdir("./../output/gp/data/")
+# # save files
+# CSV.write("./../output/gp/data/preds.csv",pred_df)
+# CSV.write("./../output/gp/data/params.csv",param_df)
+# alert("Saved GP outputs to ./../output/gp/data/")
 
 
 
@@ -63,8 +63,9 @@ alert("**** Finished fig5 simulations ****")
 # run GP on one replicate of sims
 println("**** Running GP on fig 5 sims ****")
 sim_source = "./../output/fig5_sims.csv"
+noise_level = 0.001
 sim_data = CSV.read(sim_source,DataFrames.DataFrame);
-sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,0.001)) # add experimental noise
+sim_data[:,:lnM_sum] = sim_data[:,:lnM_sum] .+ rand(Normal(0,noise_level), nrow(sim_data)) # add experimental noise
 sim_data = sim_data[sim_data.replicate .< 20,:] 
 model = GrowthTraceTools.Matern32NoTrendModel()
 pred_df,param_df = gp_pipeline(sim_data,model)
